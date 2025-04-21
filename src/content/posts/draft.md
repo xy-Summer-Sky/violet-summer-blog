@@ -1,8 +1,8 @@
 ---
 title: Draft Example
-published: 2022-07-01
+published: 2025-04-01
 tags: [Markdown, Blogging, Demo]
-category: Examples
+category: 草稿
 draft: true
 ---
 
