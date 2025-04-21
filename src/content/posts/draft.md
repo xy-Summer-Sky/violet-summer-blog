@@ -1,7 +1,7 @@
 ---
 title: Draft Example
 published: 2025-04-01
-tags: [Markdown, Blogging, Demo]
+tags: [Markdown]
 category: 草稿
 draft: true
 ---
