@@ -7,6 +7,10 @@ category: paper
 draft: false
 ---
 
+
+
+<div className="flex justify-center divide-x-0 align-baseline"></div>
+
 ## 摘要
 
 1. 本文提出了一种名为 GeoTexBuild 的模块化生成框架，可根据地图轮廓生成 3D 建筑模型，主要内容如下：
@@ -16,6 +20,9 @@ draft: false
 5. 几何重建：对生成的高度图进行去噪、多边形拟合，重建点云并生成建筑表面，确保模型几何精度。
 6. 外观风格化：基于 Text2Mesh 模块，通过文本提示为模型添加纹理和颜色细节，提升真实感。
 
+![alt text](image.png)
+
+![alt text](assets/3d-learn/image.png)
 关键创新：
 
 1. 引入 ControlNet 和 Text2Mesh，分别实现几何结构和外观风格的可控生成，解决了单张图像生成结构单一的问题。
