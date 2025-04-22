@@ -77,7 +77,9 @@ $$
 
 #### 张量场函数：
 
-$$T(p) = e^{-d||p-p_0||^2}l\begin{pmatrix}cos2\theta&sin2\theta\\sin2\theta&-cos2\theta\end{pmatrix}$$
+$$
+T(p) = e^{-d||p-p_0||^2}l\begin{pmatrix}cos2\theta&sin2\theta\\sin2\theta&-cos2\theta\end{pmatrix}
+$$
 
 
 
@@ -148,7 +150,8 @@ $x = x_p - x_0$,$y = y_p - y_0$  ：表示相对于中心点的坐标偏移
 
 ### 张量场函数: 
 
-$$ T(p) = R \begin{pmatrix}
+$$ 
+T(p) = R \begin{pmatrix}
      cos 2\theta & sin2\theta
      \\ sin2\theta & -cos2\theta
             \end{pmatrix}
