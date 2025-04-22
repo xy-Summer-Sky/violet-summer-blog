@@ -206,7 +206,7 @@ $$
 
 <div class="flex space-x-1 h-6/7 text-sm">
 
-<div class="flex-col space-y-1 h-full text-sm h-full">
+<div class="flex-col space-y-1  text-sm h-full">
 <div class="bg-white shadow-md rounded-lg p-3 w-full">
 <h4 class="text-xs font-bold text-blue-600 mb-4 ">1. 是什么</h4>
 
