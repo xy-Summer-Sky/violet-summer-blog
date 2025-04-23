@@ -62,7 +62,7 @@ draft: false
 </div>
 
 <div class="flex flex-col items-center w-full mb-4">
-  <img src="assets/GeoTexBuild/image.png" alt="GeoTexBuild流程图" class="w-1/2 mb-4" />
+  <img src="/assets/GeoTexBuild/image.png" alt="GeoTexBuild流程图" class="w-1/2 mb-4" />
   <div class="text-base w-full text-left">
     <ul>
       <li>以<strong>建筑足迹（ControlNet）</strong>作为几何控制参数，结合<strong>手绘草图（ControlNet）</strong>和<strong>文本提示（Text2Mesh）</strong>，极大提升可控性与灵活性。</li>
@@ -82,7 +82,7 @@ draft: false
 
 <div class="flex flex-col md:flex-row items-center gap-8 my-6">
   <div class="md:w-1/2 w-full flex-shrink-0">
-    <img src="assets/GeoTexBuild/image-2.png" alt="GeoTexBuild流程图" class="rounded shadow-lg w-full" />
+    <img src="/assets/GeoTexBuild/image-2.png" alt="GeoTexBuild流程图" class="rounded shadow-lg w-full" />
   </div>
   <div class="md:w-1/2 w-full text-base leading-relaxed space-y-3">
     <div>
@@ -109,7 +109,7 @@ draft: false
 验证各阶段有效性(**高度图生成的可控性** **几何重建的准确性** **外观风格化的语义匹配度**) ,对比现有方法验证其优势
 
 <div class="flex flex-col items-center">
-  <img src="assets/GeoTexBuild/image-3.png" alt="实验流程与结果" class="w-3/5   rounded shadow " />
+  <img src="/assets/GeoTexBuild/image-3.png" alt="实验流程与结果" class="w-3/5   rounded shadow " />
 </div>
 
 <div class="flex flex-row gap-8 text-sm ">
@@ -141,7 +141,7 @@ draft: false
 
 <div class="flex flex-col md:flex-row gap-8 my-8 items-center">
   <div class="w-1/3 ">
-    <img src="assets/GeoTexBuild/image-4.png" alt="不同控制组合对比" class="rounded shadow w-full" />
+    <img src="/assets/GeoTexBuild/image-4.png" alt="不同控制组合对比" class="rounded shadow w-full" />
   </div>
   <div class="md:w-2/3 w-full text-sm leading-relaxed space-y-2">
     <div>
@@ -201,7 +201,7 @@ draft: false
     </div>
   </div>
   <div class="w-1/3 ">
-    <img src="assets/GeoTexBuild/image-5.png" alt="几何重建消融实验" class="rounded shadow w-full" />
+    <img src="/assets/GeoTexBuild/image-5.png" alt="几何重建消融实验" class="rounded shadow w-full" />
   </div>
 </div>
 
@@ -210,7 +210,7 @@ draft: false
 
 <div class="flex flex-row gap-8 items-center">
   <div class=" w-1/3 mb-4">
-    <img src="assets/GeoTexBuild/image-6.png" alt="Text2Mesh实验对比" class="rounded shadow" />
+    <img src="/assets/GeoTexBuild/image-6.png" alt="Text2Mesh实验对比" class="rounded shadow" />
   </div>
  <div class="w-2/3 overflow-x-auto">
   <table class="w-2/3 text-xs text-left border border-gray-200">
