@@ -2,7 +2,7 @@
 title: Markdown Example
 published: 2024-10-01
 description: A simple example of a Markdown blog post.
-tags: [Markdown]
+tags: [Example]
 category: Examples
 draft: false
 ---
