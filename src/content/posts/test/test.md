@@ -14,6 +14,6 @@ image: assets/test/violet-icon.png
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 
-![deepseek_mermaid_20250420_83cd1c](assets/test/1.png)
+![deepseek_mermaid_20250420_83cd1c](../../../../public/assets/test/1.png)
 
 ## 目录显示吗
