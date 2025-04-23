@@ -114,6 +114,7 @@ export default defineConfig({
     ],
   },
   vite: {
+    assetsInclude:["**/*.docx","**/*.pptx"],
     build: {
       rollupOptions: {
         onwarn(warning, warn) {
