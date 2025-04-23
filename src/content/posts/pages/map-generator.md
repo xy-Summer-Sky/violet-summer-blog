@@ -262,7 +262,7 @@ $$
 
 
 
-layout: two-cols-header
+
 
 
 <div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-gradient-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent"> 
