@@ -8,7 +8,7 @@ draft: false
 ---
 
 
-<div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-gradient-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent">
+<div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-linear-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent">
 
 map-generator 论文以及网站报告
 
@@ -27,7 +27,7 @@ map-generator 论文以及网站报告
 
 
 
-<div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-gradient-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent">
+<div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-linear-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent">
 张量图
 </div>
 
@@ -198,7 +198,7 @@ $$
 
 
 
-<div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-gradient-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent">
+<div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-linear-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent">
 
 流线（从张量图到街道地图的工具）
 
@@ -265,7 +265,7 @@ $$
 layout: two-cols-header
 
 
-<div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-gradient-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent"> 
+<div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-linear-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent"> 
 
 三维几何生成（一）
 
@@ -317,7 +317,7 @@ layout: two-cols-header
 
 
 
-<div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-gradient-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent"> 
+<div class="w-full p-3 border-b text-center  items-center text-4xl font-bold bg-linear-to-r from-[#4EC5D4] via-[#2B90B6] to-[#146b8c] bg-clip-text text-transparent"> 
 
 三维几何生成（二）
 
