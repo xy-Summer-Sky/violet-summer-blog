@@ -3,7 +3,7 @@ title: Include Video in the Posts
 published: 2025-04-01
 description: This post demonstrates how to include embedded video in a blog post.
 tags: [Shots, Video]
-category: Examples
+category: Daily Life Journal
 draft: false
 ---
 
