@@ -5,7 +5,7 @@ description: This post demonstrates how to include embedded video in a blog post
 tags: [Example]
 category: Example
 draft: false
-image: assets/test/violet-icon.png
+image: /assets/test/violet-icon.png
 ---
 
 
