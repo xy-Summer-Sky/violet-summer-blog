@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5f23726e0f39ecde",
+        "id": "11d8b6f578def42b",
         "type": "tabs",
         "children": [
           {
-            "id": "f265dbf20b5a6387",
+            "id": "0dd84d16d2024278",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "3d/image.png"
-              },
-              "icon": "lucide-image",
-              "title": "image"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -163,8 +161,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f265dbf20b5a6387",
+  "active": "0dd84d16d2024278",
   "lastOpenFiles": [
+    "3d/image.png",
     "3d/assets/GeoTexBuild/image.png",
     "3d/assets/GeoTexBuild/image-6.png",
     "3d/assets/GeoTexBuild/image-7.png",
@@ -179,7 +178,6 @@
     "3d/assets/3d-learn.md/image.png",
     "3d/assets/3d-learn.md",
     "3d/3d-learn.md",
-    "3d/image.png",
     "public/1.pptx",
     "pages/ref/1read.docx",
     "3d/3d-learn.md~",
