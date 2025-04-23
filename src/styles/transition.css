@@ -1,4 +1,5 @@
 /* Page transition animations with Swup */
+@reference "../styles/global.css"
 html.is-changing .transition-swup-fade {
     @apply transition-all duration-200
 }
