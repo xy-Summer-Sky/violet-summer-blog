@@ -11,10 +11,14 @@
             "id": "0dd84d16d2024278",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "course/software-test/review.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "review"
             }
           }
         ]
@@ -163,6 +167,17 @@
   },
   "active": "0dd84d16d2024278",
   "lastOpenFiles": [
+    "code-learn/software-framework/react/react.md",
+    "code-learn/program-language/py/python.md",
+    "code-learn/program-language/py",
+    "code-learn/software-framework/react",
+    "code-learn/software-framework/py/python.md",
+    "code-learn/software-framework/py/python,mc",
+    "code-learn/program-language/react",
+    "code-learn/software-framework/py",
+    "code-learn/software-framework",
+    "code-learn/program-language",
+    "code-learn",
     "3d/image.png",
     "3d/assets/GeoTexBuild/image.png",
     "3d/assets/GeoTexBuild/image-6.png",
@@ -179,14 +194,6 @@
     "3d/assets/3d-learn.md",
     "3d/3d-learn.md",
     "public/1.pptx",
-    "pages/ref/1read.docx",
-    "3d/3d-learn.md~",
-    "course/software-test/课件/Ch9 IntegrationTesting.pdf",
-    "course/software-test/课件/Ch14 SoftwareMaintenance.pdf",
-    "course/software-test/课件/Ch13 AutomatedTesting.pdf",
-    "course/software-test/课件/Ch13 AutomatedTesting (1).pdf",
-    "course/software-test/课件/Ch12 BugReport_Test Report.pdf",
-    "course/software-test/课件/Ch11 AcceptanceTesting.pdf",
     "pages/block.md",
     "pages/ref/read.md",
     "pages/map-generator.md",
