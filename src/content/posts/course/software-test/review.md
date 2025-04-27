@@ -664,3 +664,15 @@ Control Flow Testing
 3. Estimate test effort 
 4. Prepare and review test plan
 
+## Test Case
+
+**测试用例**是一个文档化的集合，包括前提条件（先决条件）、过程（输入/操作）和后置条件（预期结果），测试人员使用它来判断被测系统是否满足要求或正常工作。
+
+- **测试脚本**：一个测试用例可以包含一个或多个测试脚本。
+    
+    - 测试脚本是执行测试的一系列指令。
+
+- **测试套件**：一组测试用例的集合称为测试套件。
+
+
+# Chapter 8: Unit Testing
