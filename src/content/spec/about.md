@@ -1,7 +1,7 @@
 # 关于我
-This is the github site for [VioletSummer](https://github.com/xy-Summer-Sky).
+This is the github site for [VioletSummer](https://github.com/violet-summer).
 
-::github{repo="xy-Summer-Sky/violet-summer-blog"}
+::github{repo="violet-summer/violet-summer-blog"}
 
 [//]: # (> ### Sources of images used in this site)
 
