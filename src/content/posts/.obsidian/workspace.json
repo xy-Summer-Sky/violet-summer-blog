@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0dd84d16d2024278",
+            "id": "a6384f9e7243ee41",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -17,6 +17,38 @@
               },
               "icon": "lucide-file-text",
               "title": "REVIEW"
+            }
+          },
+          {
+            "id": "b92d2260f62a7b8a",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "course/software-test/课件/Ch2 TestProcess.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Ch2 TestProcess"
+            }
+          }
+        ]
+      },
+      {
+        "id": "9a88058baaf686f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be63f77cd4828ebd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "course/software-test/review.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "review"
             }
           }
         ]
@@ -76,7 +108,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "075d67ec12262387",
@@ -92,6 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "course/software-test/review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +134,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "review 的反向链接列表"
             }
           },
           {
@@ -138,20 +171,31 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "course/software-test/review.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "review 的大纲"
+            }
+          },
+          {
+            "id": "7ddaab1b57dfdcf7",
+            "type": "leaf",
+            "state": {
+              "type": "github-copilot-chat-view",
+              "state": {},
+              "icon": "bot-message-square",
+              "title": "Copilot Chat"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 366.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -163,35 +207,42 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0dd84d16d2024278",
+  "active": "be63f77cd4828ebd",
   "lastOpenFiles": [
-    "course/software-test/课件/Ch1-2 Introduction.pdf",
-    "course/software-test/课件/Ch2 TestProcess.pdf",
-    "course/software-test/课件/Ch3 TestPrinciple.pdf",
-    "course/software-test/课件/Ch4 BlackBox.pdf",
-    "course/software-test/课件/Ch5-1 WhiteBox-LogicCoverage.pdf",
-    "course/software-test/课件/Ch10-2 SystemTesting.pdf",
-    "course/software-test/课件/Ch10-1 SystemTesting.pdf",
-    "course/software-test/课件/Ch9 IntegrationTesting.pdf",
-    "course/software-test/课件/Ch8 UnitTesting.pdf",
-    "course/software-test/课件/Ch7 TestPlan_TestCase.pdf",
+    "course/software-test/课件/REVIEW.pdf",
     "course/software-test/review.md",
+    "course/software-test/课件/Ch2 TestProcess.pdf",
+    "course/software-test/assets/review/file-20250428000937343.png",
+    "course/software-test/assets/review/file-20250428000043084.png",
+    "course/software-test/assets/review/file-20250427235325112.png",
+    "course/software-test/assets/review/file-20250427234520878.png",
+    "course/software-test/assets/review/file-20250427222826528.png",
+    "course/software-test/assets/review/file-20250427222803384.png",
+    "course/software-test/assets/review/file-20250427222753913.png",
+    "course/software-test/assets/review/file-20250427222748106.png",
+    "course/software-test/assets/review/file-20250427222744824.png",
+    "course/software-test/assets/review/file-20250427222629841.png",
+    "course/software-test/assets/review",
+    "course/software-test/assets",
+    "course/software-test/课件/Ch1-2 Introduction.pdf",
+    "course/software-test/课件/Ch1-1 Introduction.pdf",
+    "course/software-test/课件/Ch9 IntegrationTesting.pdf",
+    "code-learn-software-framework/py/python.md",
+    "code-learn-software-framework/py",
+    "code-learn-software-framework/java/java.md",
+    "code-learn-software-framework/java",
+    "code-learn-software-framework/jsx/react.md",
+    "code-learn-software-framework/jsx",
+    "code-learn-software-framework/program-language/software-framework/react/react.md",
+    "code-learn-software-framework/program-language/py/python.md",
+    "code-learn-software-framework/program-language/java/java.md",
+    "code-learn/program-language/software-framework/react/react.md",
+    "code-learn/program-language/java/java.md",
     "code-learn/software-framework/react/react.md",
     "code-learn/program-language/py/python.md",
-    "code-learn/program-language/py",
     "code-learn/software-framework/py/python.md",
-    "3d/image.png",
-    "3d/assets/GeoTexBuild/image.png",
-    "3d/assets/GeoTexBuild/image-6.png",
-    "3d/assets/GeoTexBuild/image-7.png",
-    "3d/assets/GeoTexBuild/image-4.png",
-    "3d/assets/GeoTexBuild/image-5.png",
-    "3d/assets/GeoTexBuild/image-3.png",
-    "3d/assets/GeoTexBuild/image-2.png",
-    "3d/assets/GeoTexBuild/image-1.png",
     "3d/GeoTexBuild.md",
     "pages/GeoTexBuild.md",
-    "3d/assets/3d-learn.md/image.png",
     "3d/assets/3d-learn.md",
     "3d/3d-learn.md",
     "pages/block.md",
