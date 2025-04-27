@@ -18,18 +18,6 @@
               "icon": "lucide-file-text",
               "title": "REVIEW"
             }
-          },
-          {
-            "id": "b92d2260f62a7b8a",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "course/software-test/课件/Ch2 TestProcess.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Ch2 TestProcess"
-            }
           }
         ]
       },
@@ -103,8 +91,24 @@
               "icon": "lucide-bookmark",
               "title": "书签"
             }
+          },
+          {
+            "id": "f86df52fdf61284a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "course/software-test/review.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "review 的大纲"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -166,21 +170,6 @@
             }
           },
           {
-            "id": "f86df52fdf61284a",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "course/software-test/review.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "review 的大纲"
-            }
-          },
-          {
             "id": "7ddaab1b57dfdcf7",
             "type": "leaf",
             "state": {
@@ -191,7 +180,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -211,6 +200,10 @@
   "lastOpenFiles": [
     "course/software-test/课件/REVIEW.pdf",
     "course/software-test/review.md",
+    "course/software-test/assets/review/file-20250428013940229.png",
+    "course/software-test/assets/review/file-20250428013255491.png",
+    "course/software-test/assets/review/file-20250428010300989.png",
+    "course/software-test/assets/review/file-20250428005749033.png",
     "course/software-test/课件/Ch2 TestProcess.pdf",
     "course/software-test/assets/review/file-20250428000937343.png",
     "course/software-test/assets/review/file-20250428000043084.png",
@@ -218,10 +211,6 @@
     "course/software-test/assets/review/file-20250427234520878.png",
     "course/software-test/assets/review/file-20250427222826528.png",
     "course/software-test/assets/review/file-20250427222803384.png",
-    "course/software-test/assets/review/file-20250427222753913.png",
-    "course/software-test/assets/review/file-20250427222748106.png",
-    "course/software-test/assets/review/file-20250427222744824.png",
-    "course/software-test/assets/review/file-20250427222629841.png",
     "course/software-test/assets/review",
     "course/software-test/assets",
     "course/software-test/课件/Ch1-2 Introduction.pdf",
