@@ -107,8 +107,7 @@
               "title": "review 的大纲"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -178,9 +177,19 @@
               "icon": "bot-message-square",
               "title": "Copilot Chat"
             }
+          },
+          {
+            "id": "bda66b7cd7f2ed8d",
+            "type": "leaf",
+            "state": {
+              "type": "github-copilot-chat-view",
+              "state": {},
+              "icon": "bot-message-square",
+              "title": "Copilot Chat"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -200,6 +209,11 @@
   "lastOpenFiles": [
     "course/software-test/课件/REVIEW.pdf",
     "course/software-test/review.md",
+    "course/software-test/assets/review/file-20250428080316566.png",
+    "course/software-test/assets/review/file-20250428080206842.png",
+    "course/software-test/assets/review/file-20250428075905435.png",
+    "course/software-test/assets/review/file-20250428074215088.png",
+    "course/software-test/课件/Ch7 TestPlan_TestCase.pdf",
     "course/software-test/assets/review/file-20250428013940229.png",
     "course/software-test/assets/review/file-20250428013255491.png",
     "course/software-test/assets/review/file-20250428010300989.png",
@@ -207,10 +221,6 @@
     "course/software-test/课件/Ch2 TestProcess.pdf",
     "course/software-test/assets/review/file-20250428000937343.png",
     "course/software-test/assets/review/file-20250428000043084.png",
-    "course/software-test/assets/review/file-20250427235325112.png",
-    "course/software-test/assets/review/file-20250427234520878.png",
-    "course/software-test/assets/review/file-20250427222826528.png",
-    "course/software-test/assets/review/file-20250427222803384.png",
     "course/software-test/assets/review",
     "course/software-test/assets",
     "course/software-test/课件/Ch1-2 Introduction.pdf",
@@ -221,7 +231,6 @@
     "code-learn-software-framework/java/java.md",
     "code-learn-software-framework/java",
     "code-learn-software-framework/jsx/react.md",
-    "code-learn-software-framework/jsx",
     "code-learn-software-framework/program-language/software-framework/react/react.md",
     "code-learn-software-framework/program-language/py/python.md",
     "code-learn-software-framework/program-language/java/java.md",
