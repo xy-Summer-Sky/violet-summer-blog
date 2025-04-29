@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3d/GeoTexBuild.md",
+                "file": "diary/2025/04/2025-04-30.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GeoTexBuild"
+              "title": "2025-04-30"
             }
           }
         ]
@@ -189,11 +189,15 @@
   },
   "active": "a6384f9e7243ee41",
   "lastOpenFiles": [
+    "3d/GeoTexBuild.md",
+    "diary/2025/04/2025-04-30.md",
+    "diary/2025/04",
+    "diary/2025",
+    "diary",
     "gallery/gallery.md",
     "code-learn-software-framework/py/python.md",
     "code-learn-software-framework/jsx/react.md",
     "3d/ai-text-2-model.md",
-    "3d/GeoTexBuild.md",
     "3d/map-generator.md",
     "markdown-extended.md",
     "markdown.md",
@@ -220,10 +224,7 @@
     "3d/trans.md",
     "assets/GeoTexBuild",
     "assets",
-    "course/software-test/课件/REVIEW.pdf",
     "course/software-test/assets/review/file-20250429003912715.png",
-    "course/software-test/课件/Ch7 TestPlan_TestCase.pdf",
-    "course/software-test/课件/Ch2 TestProcess.pdf",
     "code-learn-software-framework/program-language/software-framework/react/react.md",
     "code-learn-software-framework/program-language/py/python.md",
     "code-learn-software-framework/program-language/java/java.md",
@@ -233,7 +234,6 @@
     "code-learn/program-language/py/python.md",
     "code-learn/software-framework/py/python.md",
     "pages/GeoTexBuild.md",
-    "3d/assets/3d-learn.md",
-    "3d/3d-learn.md"
+    "3d/assets/3d-learn.md"
   ]
 }
