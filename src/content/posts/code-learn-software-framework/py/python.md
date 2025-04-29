@@ -6,7 +6,7 @@ tags:
   - 编程语言
   - python
 category: 编程基础
-draft: true
+draft: false
 image: '/violet.png'
 ---
 

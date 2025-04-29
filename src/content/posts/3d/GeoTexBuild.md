@@ -5,6 +5,7 @@ description: "关于论文GeoTexBuild: 3D Building Model Generation from Map Foo
 tags: [3d,python,paper]
 category: paper
 draft: false
+image: '/violet.png'
 ---
 
 # GeoTexBuild: 基于地图足迹的3D建筑模型生成
