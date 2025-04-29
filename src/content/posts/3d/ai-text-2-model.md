@@ -1,5 +1,5 @@
 ---
-title: ai-text-2-model
+title: Ai-Text2Model
 published: 2025-04-30
 description: 本地部署使用腾讯开源的混元3d模型生成的 ai-text-2-model 的功能体验
 tags:

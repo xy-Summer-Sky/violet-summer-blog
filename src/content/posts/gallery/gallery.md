@@ -5,7 +5,7 @@ description: 展示平日闲暇出游的拍摄照片，很多都是朋友拿相�
 tags:
   - Shots
   - Video
-category: Daily Life Journal
+category: daily life journal
 draft: false
 ---
 

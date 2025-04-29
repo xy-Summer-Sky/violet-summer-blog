@@ -1,9 +1,9 @@
 ---
-title: map-generator 论文以及网站报告
+title: MapGenerator 论文以及网站报告
 published: 2025-04-28
 description: map-generator 论文以及网站报告，解释论文原理以及代码结构
 tags:
-  - Paper
+  - paper
   - 3d
 category: 3d
 draft: false
