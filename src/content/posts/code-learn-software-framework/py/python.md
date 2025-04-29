@@ -1,5 +1,5 @@
 ---
-title: PYTHON
+title: Python
 published: 2025-04-25
 description: python一些语法特性和常用库的使用
 tags:

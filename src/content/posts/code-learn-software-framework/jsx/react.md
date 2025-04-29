@@ -1,5 +1,5 @@
 ---
-title: REACT
+title: React
 published: 2025-04-25
 description: react-ts语法框架基础以及常用生态库使用
 tags:
