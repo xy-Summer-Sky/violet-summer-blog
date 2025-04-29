@@ -7,6 +7,7 @@ tags:
   - review
 category: course
 draft: false
+image: '/violet.png'
 ---
 
 # 内容概览

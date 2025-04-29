@@ -7,6 +7,7 @@ tags:
   - python
 category: 编程基础
 draft: true
+image: '/violet.png'
 ---
 
 # 基础特性

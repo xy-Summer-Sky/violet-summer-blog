@@ -7,6 +7,7 @@ tags:
   - 3d
 category: 3d
 draft: false
+image: '/violet.png'
 ---
 
 # map-generator 论文以及网站报告

@@ -7,6 +7,7 @@ tags:
   - Video
 category: daily life journal
 draft: false
+image: '/violet.png'
 ---
 
 # 天堂顶-旁边的国家森林公园

@@ -8,6 +8,7 @@ tags:
   - ai
 category: ai
 draft: false
+image: '/violet.png'
 ---
 
 # ai-text-2-model
