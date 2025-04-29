@@ -1,8 +1,10 @@
 ---
 title: 生活摄影
-published: 2025-04-027
+published: 2025-04-27
 description: 展示平日闲暇出游的拍摄照片，很多都是朋友拿相机拍摄——精修后的。
-tags: [Shots, Video]
+tags:
+  - Shots
+  - Video
 category: Daily Life Journal
 draft: false
 ---
