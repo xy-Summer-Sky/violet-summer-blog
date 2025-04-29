@@ -4,39 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "11d8b6f578def42b",
+        "id": "4088af5467ac35a9",
         "type": "tabs",
         "children": [
           {
             "id": "a6384f9e7243ee41",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "course/software-test/课件/REVIEW.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "REVIEW"
-            }
-          }
-        ]
-      },
-      {
-        "id": "9a88058baaf686f6",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "be63f77cd4828ebd",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "course/software-test/review.md",
+                "file": "3d/GeoTexBuild.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "review"
+              "title": "GeoTexBuild"
             }
           }
         ]
@@ -98,16 +80,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "course/software-test/review.md",
+                "file": "3d/GeoTexBuild.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "review 的大纲"
+              "title": "GeoTexBuild 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -205,8 +188,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "be63f77cd4828ebd",
+  "active": "f86df52fdf61284a",
   "lastOpenFiles": [
+    "pages/map-generator.md",
+    "3d/GeoTexBuild.md",
+    "3d/assets/GeoTexBuild",
+    "3d/ai-text-2-model.md",
+    "3d/trans.md",
+    "3d/image.png",
+    "assets/GeoTexBuild",
+    "assets",
     "course/software-test/课件/REVIEW.pdf",
     "course/software-test/review.md",
     "course/software-test/assets/review/file-20250429003912715.png",
@@ -219,17 +210,13 @@
     "course/software-test/assets/review/file-20250428074215088.png",
     "course/software-test/课件/Ch7 TestPlan_TestCase.pdf",
     "course/software-test/assets/review/file-20250428013940229.png",
-    "course/software-test/assets/review/file-20250428013255491.png",
     "course/software-test/课件/Ch2 TestProcess.pdf",
     "course/software-test/assets/review",
     "course/software-test/assets",
     "course/software-test/课件/Ch1-2 Introduction.pdf",
     "course/software-test/课件/Ch1-1 Introduction.pdf",
-    "course/software-test/课件/Ch9 IntegrationTesting.pdf",
     "code-learn-software-framework/py/python.md",
-    "code-learn-software-framework/py",
     "code-learn-software-framework/java/java.md",
-    "code-learn-software-framework/java",
     "code-learn-software-framework/jsx/react.md",
     "code-learn-software-framework/program-language/software-framework/react/react.md",
     "code-learn-software-framework/program-language/py/python.md",
@@ -239,17 +226,14 @@
     "code-learn/software-framework/react/react.md",
     "code-learn/program-language/py/python.md",
     "code-learn/software-framework/py/python.md",
-    "3d/GeoTexBuild.md",
     "pages/GeoTexBuild.md",
     "3d/assets/3d-learn.md",
     "3d/3d-learn.md",
     "pages/block.md",
     "pages/ref/read.md",
-    "pages/map-generator.md",
     "pages/json-explain.md",
     "pages/lod-read.md",
     "pages/map-gen-trans.md",
-    "3d/index.md",
-    "index.md"
+    "3d/index.md"
   ]
 }
