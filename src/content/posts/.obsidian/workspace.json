@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3d/GeoTexBuild.md",
+                "file": "markdown-extended.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GeoTexBuild"
+              "title": "markdown-extended"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "“./map-generator",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,17 +80,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3d/GeoTexBuild.md",
+                "file": "markdown-extended.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "GeoTexBuild 的大纲"
+              "title": "markdown-extended 的大纲"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -188,36 +187,41 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f86df52fdf61284a",
+  "active": "4488f2b841173cf9",
   "lastOpenFiles": [
-    "pages/map-generator.md",
+    "markdown.md",
+    "draft.md",
+    "3d/assets/en.pdf",
+    "3d/assets/cn.pdf",
+    "3d/map-generator.md",
     "3d/GeoTexBuild.md",
+    "3d/image.png",
+    "code-learn-software-framework/py/python.md",
+    "code-learn-software-framework/jsx/react.md",
+    "code-learn-software-framework/java/java.md",
+    "course/software-test/review.md",
+    "map-generator/image-20250417094948061.png.md",
+    "map-generator/image-20250417095034555.png.md",
+    "map-generator",
+    "3d/assets/map-generator/image-20250417095356645.png",
+    "3d/assets/map-generator/image-20250417095248116.png",
+    "3d/assets/map-generator/image-20250417095104102.png",
+    "3d/assets/map-generator/image-20250417095034555.png",
+    "3d/assets/map-generator/image-20250417095008999.png",
+    "3d/assets/map-generator/image-20250417094948061.png",
+    "3d/assets/map-generator/image-20250417094903263.png",
+    "3d/assets/map-generator/image-20250417094712410.png",
+    "3d/assets/map-generator",
+    "pages/map-generator.md",
     "3d/assets/GeoTexBuild",
     "3d/ai-text-2-model.md",
     "3d/trans.md",
-    "3d/image.png",
     "assets/GeoTexBuild",
     "assets",
     "course/software-test/课件/REVIEW.pdf",
-    "course/software-test/review.md",
     "course/software-test/assets/review/file-20250429003912715.png",
-    "course/software-test/assets/review/file-20250429003834065.png",
-    "course/software-test/assets/review/file-20250429003154787.png",
-    "course/software-test/assets/review/file-20250429003137063.png",
-    "course/software-test/assets/review/file-20250428080316566.png",
-    "course/software-test/assets/review/file-20250428080206842.png",
-    "course/software-test/assets/review/file-20250428075905435.png",
-    "course/software-test/assets/review/file-20250428074215088.png",
     "course/software-test/课件/Ch7 TestPlan_TestCase.pdf",
-    "course/software-test/assets/review/file-20250428013940229.png",
     "course/software-test/课件/Ch2 TestProcess.pdf",
-    "course/software-test/assets/review",
-    "course/software-test/assets",
-    "course/software-test/课件/Ch1-2 Introduction.pdf",
-    "course/software-test/课件/Ch1-1 Introduction.pdf",
-    "code-learn-software-framework/py/python.md",
-    "code-learn-software-framework/java/java.md",
-    "code-learn-software-framework/jsx/react.md",
     "code-learn-software-framework/program-language/software-framework/react/react.md",
     "code-learn-software-framework/program-language/py/python.md",
     "code-learn-software-framework/program-language/java/java.md",
@@ -230,10 +234,6 @@
     "3d/assets/3d-learn.md",
     "3d/3d-learn.md",
     "pages/block.md",
-    "pages/ref/read.md",
-    "pages/json-explain.md",
-    "pages/lod-read.md",
-    "pages/map-gen-trans.md",
-    "3d/index.md"
+    "pages/ref/read.md"
   ]
 }
