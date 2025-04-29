@@ -1,5 +1,5 @@
 ---
-title: java
+title: JAVA
 published: 2025-04-27
 description: java的语法特性以及底层实现原理
 tags:
