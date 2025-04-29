@@ -11,14 +11,10 @@
             "id": "a6384f9e7243ee41",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "markdown-extended.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "markdown-extended"
+              "title": "新标签页"
             }
           }
         ]
