@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/2025/04/2025-04-30.md",
+                "file": "daily-record/travel.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-04-30"
+              "title": "travel"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "“./map-generator",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,16 +80,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "gallery/gallery.md",
+                "file": "daily-record/travel.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "gallery 的大纲"
+              "title": "travel 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -143,35 +144,15 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "标签"
             }
-          },
-          {
-            "id": "7ddaab1b57dfdcf7",
-            "type": "leaf",
-            "state": {
-              "type": "github-copilot-chat-view",
-              "state": {},
-              "icon": "bot-message-square",
-              "title": "Copilot Chat"
-            }
-          },
-          {
-            "id": "bda66b7cd7f2ed8d",
-            "type": "leaf",
-            "state": {
-              "type": "github-copilot-chat-view",
-              "state": {},
-              "icon": "bot-message-square",
-              "title": "Copilot Chat"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -187,14 +168,25 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a6384f9e7243ee41",
+  "active": "176085df76ec6329",
   "lastOpenFiles": [
-    "3d/GeoTexBuild.md",
+    "daily-record/travel.md",
+    "daily-record/assets/travel/d54a79da1ebde9cab2e92f958c74dcc7.jpg",
+    "daily-record/assets/travel/微信图片_20250503012543.jpg",
+    "daily-record/assets/travel/kangkang_light.jpg",
+    "daily-record/assets/travel/kangkang..jpg",
+    "daily-record/assets/travel/3d20b443f63a60082669efcf90d267db.jpg",
+    "daily-record/assets/travel/微信图片_20250503012536.jpg",
+    "daily-record/assets/travel/微信图片_20250503012531.jpg",
+    "daily-record/assets/travel/微信图片_20250502235711.jpg",
+    "daily-record/assets/travel/9d7e9c93a040fb88b793bdf9fec7a89d.mp4",
+    "daily-record/assets/travel/{B63FFF80-02E5-451B-901F-FE9E6334FDC1}.png",
+    "gallery/gallery.md",
     "diary/2025/04/2025-04-30.md",
+    "3d/GeoTexBuild.md",
     "diary/2025/04",
     "diary/2025",
     "diary",
-    "gallery/gallery.md",
     "code-learn-software-framework/py/python.md",
     "code-learn-software-framework/jsx/react.md",
     "3d/ai-text-2-model.md",
@@ -210,21 +202,11 @@
     "map-generator/image-20250417094948061.png.md",
     "map-generator/image-20250417095034555.png.md",
     "map-generator",
-    "3d/assets/map-generator/image-20250417095356645.png",
-    "3d/assets/map-generator/image-20250417095248116.png",
-    "3d/assets/map-generator/image-20250417095104102.png",
-    "3d/assets/map-generator/image-20250417095034555.png",
-    "3d/assets/map-generator/image-20250417095008999.png",
-    "3d/assets/map-generator/image-20250417094948061.png",
-    "3d/assets/map-generator/image-20250417094903263.png",
-    "3d/assets/map-generator/image-20250417094712410.png",
     "3d/assets/map-generator",
     "pages/map-generator.md",
     "3d/assets/GeoTexBuild",
     "3d/trans.md",
     "assets/GeoTexBuild",
-    "assets",
-    "course/software-test/assets/review/file-20250429003912715.png",
     "code-learn-software-framework/program-language/software-framework/react/react.md",
     "code-learn-software-framework/program-language/py/python.md",
     "code-learn-software-framework/program-language/java/java.md",
@@ -232,8 +214,6 @@
     "code-learn/program-language/java/java.md",
     "code-learn/software-framework/react/react.md",
     "code-learn/program-language/py/python.md",
-    "code-learn/software-framework/py/python.md",
-    "pages/GeoTexBuild.md",
-    "3d/assets/3d-learn.md"
+    "code-learn/software-framework/py/python.md"
   ]
 }
