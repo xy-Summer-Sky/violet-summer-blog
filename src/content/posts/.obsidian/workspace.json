@@ -89,8 +89,7 @@
               "title": "travel 的大纲"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -168,8 +167,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "176085df76ec6329",
+  "active": "4488f2b841173cf9",
   "lastOpenFiles": [
+    "daily-record/assets/travel/8ce6289e92d57da74ffcfcb13f0b717a.jpg",
     "daily-record/travel.md",
     "daily-record/assets/travel/d54a79da1ebde9cab2e92f958c74dcc7.jpg",
     "daily-record/assets/travel/微信图片_20250503012543.jpg",
