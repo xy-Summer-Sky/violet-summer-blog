@@ -182,3 +182,10 @@ C和D的衣服已经被染了土色，挂彩较多，我和A也挂了一点小�
 
 ![](assets/travel/9d0efe468ec8f9f1063c2cc7b6067711.jpg)
 
+# 同行者视角
+
+[D视角](https://mp.weixin.qq.com/s/Z5VS7QhT74m5XPqwq2uwLg)
+
+[A视角](https://mp.weixin.qq.com/s/6umX-g1F4hRS6Jkh0wjZEg)
+
+[摄影站点](https://500px.com.cn/ROCHEphoto)
