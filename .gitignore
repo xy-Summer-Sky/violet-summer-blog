@@ -37,3 +37,6 @@ src/content/posts/.obsidian
 
 /src/content/posts/.obsidian
 *.pdf
+*.doc
+*.ppt
+*.ini
