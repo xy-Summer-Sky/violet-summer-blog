@@ -9,7 +9,7 @@ image: '/violet.png'
 ---
 # 概念理解
 
-![](assets/LLM-data-governance/be96a4d193ea7a10e56323409dc269c%201.png)
+![](assets/llm-data-governance/be96a4d193ea7a10e56323409dc269c%201.png)
 
 ## 什么是数据治理？为什么要做数据治理
 
@@ -49,7 +49,7 @@ image: '/violet.png'
 - 一致性：多个业务数仓间的公共数据，必须在各个数据仓库中保持一致
 - 及时性：数据能及时产出和预警
 
-![](assets/LLM-data-governance/file-20250518153934253.png)
+![](assets/llm-data-governance/file-20250518153934253.png)
 
 ### 元数据管理
 
@@ -311,7 +311,7 @@ mindmap
 
 # 数据录入DeepSeek尝试
 
-![](assets/LLM-data-governance/{CD26FA0B-F77B-44FD-A072-1C41F161D1F0}.png)
+![](assets/llm-data-governance/{CD26FA0B-F77B-44FD-A072-1C41F161D1F0}.png)
 
 ## 数据来源
 
@@ -321,7 +321,7 @@ https://www.kaggle.com/datasets/michaelmatta0/global-development-indicators-2000
 
 下载数据：
 
-![](assets/LLM-data-governance/Global_Development_Indicators_2000_2020.csv)
+![](assets/llm-data-governance/Global_Development_Indicators_2000_2020.csv)
 ## LLM提示词处理流程
 
 1. Excel表格识别/抽取(指定哪些列、行)
@@ -417,7 +417,7 @@ CREATE TABLE global_development_indicators (
 
 ##### 插入结果
 
-![](assets/LLM-data-governance/{B29771A8-36D9-4388-BF9A-D015BD1CD355}.png)
+![](assets/llm-data-governance/{B29771A8-36D9-4388-BF9A-D015BD1CD355}.png)
 #### 数据插入SQL
 
 ```sql
@@ -554,7 +554,7 @@ region_economic.to_csv('cleaned_region_economic_data.csv', index=False)
 
 ##### 创建结果
 
-![](assets/LLM-data-governance/{914082FE-862E-4F86-8CC7-D1F7ECCB8409}.png)
+![](assets/llm-data-governance/{914082FE-862E-4F86-8CC7-D1F7ECCB8409}.png)
 
 #### 数据库表设计语句
 
@@ -637,7 +637,7 @@ ORDER BY total_gdp DESC;
 
 各个区域GDP总量对比
 
-![](assets/LLM-data-governance/{31238970-0267-45AB-93A8-C9FC699D0533}.png)
+![](assets/llm-data-governance/{31238970-0267-45AB-93A8-C9FC699D0533}.png)
 
 ## 使用总结
 
@@ -645,3 +645,88 @@ ORDER BY total_gdp DESC;
 2. 对专业编程能力需求小，只需要对结果**进行检验，确保数据可用**。
 3. 产生形成**提示词模板**后可以快速进行数据资产构建。
 
+# llm数据治理尝试第二版
+
+主线是使用llm产出的**代码程序**进行数据处理，而不是使用模型直接处理数据。
+
+## 提示词工程流程
+
+1. LLM加载数据文件
+2. 表结构内容解析
+3. 询问并执行简单数据清洗程序
+4. 建表存储代码生成
+5. 提出业务需求
+6. 运行生成的处理需求的代码
+7. 抽样数据进行验证
+8. 根据验证结果持久化代码为应用/服务
+
+
+![](assets/llm-data-governance/file-20250520233443984.png)
+
+## 实践流程展示
+
+### 提示词一 &表结构内容解析
+
+#### 输入
+
+给出java程序，解析表结构和行数、列数等基本信息的统计，并给出调用main函数，文件路径为C:\APP\CODE\temp\数据治理\Global_Development_Indicators_2000_2020.csv，输出信息在输出到控制台的同时保存为文本文件
+
+#### 主要结构
+
+1. 编程语言选择
+2. 解析内容
+3. 代码基本格式要求
+4. 文件路径
+5. 输出要求
+
+#### 处理结果
+
+1. 总行数: 5556  
+2. 总列数: 47
+
+经过和专业Excel工具的统计对比，程序运行结果正确
+
+### 提示词二 &询问并执行简单数据清洗程序
+
+#### 输入
+
+清理数据异常值，比如某一行全为空，并进行空值统计，清理后的数据和被清理的数据分别保存到两个文件中
+
+#### 主要结构
+
+1. 清理要求
+2. 输出要求
+
+#### 处理结果
+
+1. 总行数(含标题): 5557  
+2. 清理后数据行数: 5556  
+3. 移除的行数: 0  
+4. 总空值数量: 34439
+
+经过和专业Excel工具的统计对比，程序运行结果正确
+
+### 数据插入
+
+#### 输入
+
+给出新的java程序以及编译命令，根据清理后的数据，清理后数据文件路径为C:\APP\CODE\temp\数据治理\Cleaned_Data.csv，连接数据库，建表，规避重复建表，插入数据，数据库配置如下 127.0.0.1:3306 root helloworld data_govern，驱动位置C:\APP\CODE\temp\govern\mysql-connector-j-9.3.0.jar，
+
+#### 输入结构
+
+1. 待插入数据文件指定
+2. 数据库配置（包括hostname、数据库名称等）
+3. 建表注意事项
+4. 驱动文件位置
+5. 运行命令
+
+#### 输出结果
+
+1. 成功连接到数据库
+2. 表 global_development_indicators 创建成功
+3. 已插入 1000 条记录
+4. 已插入 2000 条记录
+5. 已插入 3000 条记录
+6. 已插入 4000 条记录
+7. 已插入 5000 条记录
+8. 数据导入完成，共插入 5556 条记录
