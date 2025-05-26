@@ -120,7 +120,7 @@ $$
 存在，则称它为 $f(x,y)$ 在点 $P_0$ 沿方向 $l$ 的方向导数，记作  
 
 $$
-\left. \frac{\partial f(P_0)}{\partial l} \right|_{P_0},
+\left. \frac{\partial f(P_0)}{\partial l} \right|_{P_0}
 $$
 
 $f(x,y)$ 在任意点 $P$ 沿方向 $l$ 的方向导数记作  
@@ -155,107 +155,118 @@ $$
 
 
 
-背包道具持久化时机，为什么不能退出/掉线的时候进行持久化
 
 
 ### 问题重述
+
 计算曲面积分：
-\[
+
+$$
 I = \iint_{\Sigma} \frac{x \, dy dz + (z+1)^2 \, dx dy}{\sqrt{x^2 + y^2 + z^2}},
-\]
+$$
 其中 \(\Sigma\) 是下半球面 \(z = -\sqrt{1 - x^2 - y^2}\) 的上侧。
 
 ### 简化思路
 题目提示这是一个简单的二重积分问题，因此我们尝试将曲面积分直接转化为 \(xy\)-平面上的二重积分。
 
 #### 1. 曲面方程
+
 下半球面的方程为：
-\[
+
+$$
 z = -\sqrt{1 - x^2 - y^2}, \quad x^2 + y^2 \leq 1.
-\]
+$$
 
 #### 2. 曲面积分转化为二重积分
+
 曲面积分的一般形式为：
-\[
+$$
 \iint_{\Sigma} P \, dy dz + Q \, dz dx + R \, dx dy.
-\]
+$$
 对于曲面 \(z = z(x, y)\)，可以表示为：
-\[
+$$
 \iint_{\Sigma} R \, dx dy = \iint_{D} R(x, y, z(x, y)) \, dx dy,
-\]
-\[
+$$
+$$
 \iint_{\Sigma} P \, dy dz = \iint_{D} P(x, y, z(x, y)) \left(-\frac{\partial z}{\partial x}\right) dx dy,
-\]
+$$
 其中 \(D\) 是曲面在 \(xy\)-平面的投影（这里是单位圆盘）。
 
 #### 3. 计算各部分
+
 - **\(R \, dx dy\) 部分**：
-  \[
+
+$$
   R = \frac{(z+1)^2}{\sqrt{x^2 + y^2 + z^2}} = \frac{\left(-\sqrt{1 - x^2 - y^2} + 1\right)^2}{1} = \left(1 - \sqrt{1 - x^2 - y^2}\right)^2.
-  \]
+  $$
   因此：
-  \[
+$$
   \iint_{\Sigma} R \, dx dy = \iint_{D} \left(1 - \sqrt{1 - x^2 - y^2}\right)^2 dx dy.
-  \]
+$$
 
 - **\(P \, dy dz\) 部分**：
-  \[
+$$
   P = \frac{x}{\sqrt{x^2 + y^2 + z^2}} = x.
-  \]
-  计算 \(\frac{\partial z}{\partial x}\)：
-  \[
+$$
+  计算 
+  $$\frac{\partial z}{\partial x}$$
+$$
   \frac{\partial z}{\partial x} = \frac{x}{\sqrt{1 - x^2 - y^2}}.
-  \]
+$$
   因此：
-  \[
+$$
   \iint_{\Sigma} P \, dy dz = \iint_{D} x \left(-\frac{x}{\sqrt{1 - x^2 - y^2}}\right) dx dy = -\iint_{D} \frac{x^2}{\sqrt{1 - x^2 - y^2}} dx dy.
-  \]
+$$
 
 #### 4. 合并积分
+
 总积分：
-\[
+$$
 I = -\iint_{D} \frac{x^2}{\sqrt{1 - x^2 - y^2}} dx dy + \iint_{D} \left(1 - \sqrt{1 - x^2 - y^2}\right)^2 dx dy.
-\]
+$$
 
 #### 5. 极坐标变换
-设 \(x = r \cos \theta\)，\(y = r \sin \theta\)，\(dx dy = r dr d\theta\)，\(D\) 为 \(0 \leq r \leq 1\)，\(0 \leq \theta \leq 2\pi\)。
+
+设 
+$$
+x = r \cos \theta，y = r \sin \theta，dx dy = r dr d\theta，D 为 0 \leq r \leq 1，0 \leq \theta \leq 2\pi
+$$
 
 - **第一项**：
-  \[
+$$
   -\int_0^{2\pi} \int_0^1 \frac{r^2 \cos^2 \theta}{\sqrt{1 - r^2}} r dr d\theta = -\int_0^{2\pi} \cos^2 \theta d\theta \int_0^1 \frac{r^3}{\sqrt{1 - r^2}} dr.
-  \]
+ $$
   计算角度部分：
-  \[
+$$
   \int_0^{2\pi} \cos^2 \theta d\theta = \pi.
-  \]
+$$
   计算径向部分（设 \(u = 1 - r^2\)）：
-  \[
+$$
   \int_0^1 \frac{r^3}{\sqrt{1 - r^2}} dr = \frac{2}{3}.
-  \]
+$$
   因此第一项为：
-  \[
+$$
   -\pi \cdot \frac{2}{3} = -\frac{2\pi}{3}.
-  \]
-
+$$
 - **第二项**：
-  \[
+$$
   \int_0^{2\pi} \int_0^1 \left(1 - \sqrt{1 - r^2}\right)^2 r dr d\theta = 2\pi \int_0^1 \left(1 - 2\sqrt{1 - r^2} + (1 - r^2)\right) r dr.
-  \]
+$$
   计算径向部分：
-  \[
+ $$
   \int_0^1 \left(2 - 2\sqrt{1 - r^2} - r^2\right) r dr = \frac{1}{12}.
-  \]
+$$
   因此第二项为：
-  \[
+$$
   2\pi \cdot \frac{1}{12} = \frac{\pi}{6}.
-  \]
+$$
 
 #### 6. 最终结果
-\[
+$$
 I = -\frac{2\pi}{3} + \frac{\pi}{6} = -\frac{\pi}{2}.
-\]
+$$
 
 ### 最终答案
-\[
+$$
 \boxed{ -\frac{\pi}{2} }
-\]
+$$
