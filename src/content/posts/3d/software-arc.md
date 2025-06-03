@@ -316,7 +316,7 @@ class ModelScene(BaseModel):
 
 ## map-gen
 
-
+通过一个设置面板进行风格化布局自动生成，并且返回svg/obj模型进行渲染，svg进行编辑。
 
 ### 接口
 
