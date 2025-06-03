@@ -718,8 +718,16 @@ ORDER BY total_gdp DESC;
 1. 待插入数据文件指定
 2. 数据库配置（包括hostname、数据库名称等）
 3. 建表注意事项
-4. 驱动文件位置
+4. 驱动文件位置(classpath)
 5. 运行命令
+
+```cmd
+
+javac CSVToDatabaseImporter.java    
+
+java -cp ".;C:\APP\CODE\temp\govern\mysql-connector-j-9.3.0.jar" CSVToDatabaseImporter
+
+```
 
 #### 输出结果
 
@@ -731,3 +739,84 @@ ORDER BY total_gdp DESC;
 6. 已插入 4000 条记录
 7. 已插入 5000 条记录
 8. 数据导入完成，共插入 5556 条记录
+
+### 环境配置
+
+```cmd
+mvn clean package
+```
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0"  
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">  
+    <modelVersion>4.0.0</modelVersion>  
+  
+    <groupId>com.example</groupId>  
+    <artifactId>csv-database-importer</artifactId>  
+    <version>1.0-SNAPSHOT</version>  
+  
+    <properties>  
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+        <maven.compiler.source>1.8</maven.compiler.source>  
+        <maven.compiler.target>1.8</maven.compiler.target>  
+        <main.class>CSVToDatabaseImporter</main.class>  
+        <!-- 新增一个属性来定义您的源文件夹 -->  
+        <custom.source.directory>${project.basedir}</custom.source.directory>  
+    </properties>  
+  
+    <dependencies>  
+        <!-- ... 您的依赖项 ... -->        <dependency>  
+            <groupId>com.mysql</groupId>  
+            <artifactId>mysql-connector-j</artifactId>  
+            <version>9.1.0</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.apache.commons</groupId>  
+            <artifactId>commons-csv</artifactId>  
+            <version>1.10.0</version>  
+        </dependency>  
+    </dependencies>  
+  
+    <build>  
+        <!-- 指定源代码目录 -->  
+        <sourceDirectory>${custom.source.directory}</sourceDirectory>  
+        <!-- 如果您也有自定义的测试代码目录，可以类似地添加 <testSourceDirectory> -->        <!-- <testSourceDirectory>${project.basedir}/tests</testSourceDirectory> -->  
+        <plugins>  
+            <plugin>  
+                <groupId>org.apache.maven.plugins</groupId>  
+                <artifactId>maven-compiler-plugin</artifactId>  
+                <version>3.13.0</version>  
+                <configuration>  
+                    <source>${maven.compiler.source}</source>  
+                    <target>${maven.compiler.target}</target>  
+                    <!-- 明确告知编译器插件源代码在哪里 -->  
+                    <!-- 注意：如果已经在 <build> 下全局设置了 <sourceDirectory>，这里通常不需要重复 -->  
+                    <!-- 但为了清晰，或者如果只想针对此插件设置，可以保留 -->  
+                    <!-- <sourceDirectory>${custom.source.directory}</sourceDirectory> -->                </configuration>  
+            </plugin>  
+            <plugin>  
+                <groupId>org.apache.maven.plugins</groupId>  
+                <artifactId>maven-shade-plugin</artifactId>  
+                <version>3.2.4</version>  
+                <executions>  
+                    <execution>  
+                        <phase>package</phase>  
+                        <goals>  
+                            <goal>shade</goal>  
+                        </goals>  
+                        <configuration>  
+                            <transformers>  
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">  
+                                    <mainClass>${main.class}</mainClass>  
+                                </transformer>  
+                            </transformers>  
+                        </configuration>  
+                    </execution>  
+                </executions>  
+            </plugin>  
+        </plugins>  
+    </build>  
+</project>
+```
+
