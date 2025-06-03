@@ -6,8 +6,8 @@ tags:
   - math
   - review
 category: course
-draft: false
-image: '/violet.png'
+draft: true
+image: /violet.png
 ---
 
 
@@ -164,9 +164,10 @@ $$
 $$
 I = \iint_{\Sigma} \frac{x \, dy dz + (z+1)^2 \, dx dy}{\sqrt{x^2 + y^2 + z^2}},
 $$
-其中 \(\Sigma\) 是下半球面 \(z = -\sqrt{1 - x^2 - y^2}\) 的上侧。
+其中 $\Sigma$ 是下半球面 $z = -\sqrt{1 - x^2 - y^2}$ 的上侧。
 
 ### 简化思路
+
 题目提示这是一个简单的二重积分问题，因此我们尝试将曲面积分直接转化为 \(xy\)-平面上的二重积分。
 
 #### 1. 曲面方程
@@ -198,7 +199,7 @@ $$
 
 $$
   R = \frac{(z+1)^2}{\sqrt{x^2 + y^2 + z^2}} = \frac{\left(-\sqrt{1 - x^2 - y^2} + 1\right)^2}{1} = \left(1 - \sqrt{1 - x^2 - y^2}\right)^2.
-  $$
+$$
   因此：
 $$
   \iint_{\Sigma} R \, dx dy = \iint_{D} \left(1 - \sqrt{1 - x^2 - y^2}\right)^2 dx dy.
