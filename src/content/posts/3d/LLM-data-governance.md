@@ -666,6 +666,239 @@ ORDER BY total_gdp DESC;
 
 ## 实践流程展示
 
+### 准备阶段-环境配置
+
+这些都是基于我自己的知识进行直接询问/要求的。
+
+#### 自定义
+
+1. 源代码根目录
+2. 资源目录位置
+3. 构建目标文件位置
+4. main入口类
+
+#### 基本配置
+
+1. 构建工具使用**maven**
+2. 语言使用Java
+3. 需要使用阿帕奇的**csv处理依赖、mysql驱动依赖、slf4j日志依赖**
+4. 分步骤进行
+5. 在代码中提供基本的注释
+6. 提供基本的java和数据库环境
+
+#### 输出结果
+
+1. maven编译打包命令
+2. jar包执行命令
+3. pom.xml文件内容
+4. logback.xml日志配置文件内容
+
+```cmd
+mvn clean package
+java -jar target/csv-database-importer-1.0-SNAPSHOT.jar
+```
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+  
+
+    <groupId>com.example</groupId>
+
+    <artifactId>csv-database-importer</artifactId>
+
+    <version>1.0-SNAPSHOT</version>
+
+  
+
+    <properties>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <main.class>CSVToDatabaseImporter</main.class>
+
+        <!-- 新增一个属性来定义您的源文件夹 -->
+
+        <custom.source.directory>${project.basedir}</custom.source.directory>
+
+    </properties>
+
+  
+
+    <dependencies>
+
+        <!-- ... 您的依赖项 ... -->
+
+        <dependency>
+
+            <groupId>com.mysql</groupId>
+
+            <artifactId>mysql-connector-j</artifactId>
+
+            <version>9.1.0</version>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>org.apache.commons</groupId>
+
+            <artifactId>commons-csv</artifactId>
+
+            <version>1.10.0</version>
+
+        </dependency>
+
+         <dependency>
+
+            <groupId>org.slf4j</groupId>
+
+            <artifactId>slf4j-api</artifactId>
+
+            <version>2.0.13</version> <!-- 您可以选择最新的稳定版本 -->
+
+        </dependency>
+
+        <!-- 添加 Logback Classic 作为 SLF4J 的实现 -->
+
+        <dependency>
+
+            <groupId>ch.qos.logback</groupId>
+
+            <artifactId>logback-classic</artifactId>
+
+            <version>1.5.6</version> <!-- 您可以选择最新的稳定版本 -->
+
+        </dependency>
+
+    </dependencies>
+
+  
+
+    <build>
+
+        <!-- 指定源代码目录 -->
+
+        <sourceDirectory>${custom.source.directory}</sourceDirectory>
+
+        <!-- 如果您也有自定义的测试代码目录，可以类似地添加 <testSourceDirectory> -->
+
+        <!-- <testSourceDirectory>${project.basedir}/tests</testSourceDirectory> -->
+
+        <resources>
+
+            <resource>
+
+                <directory>${project.basedir}</directory> <!-- 指定项目根目录为资源目录 -->
+
+                <includes>
+
+                    <include>logback.xml</include> <!-- 只包含根目录下的 logback.xml 文件 -->
+
+                </includes>
+
+            </resource>
+
+            <!-- 如果您还想使用 src/main/resources 目录存放其他资源文件，可以保留或添加以下配置 -->
+
+            <!--
+
+            <resource>
+
+                <directory>src/main/resources</directory>
+
+            </resource>
+
+            -->
+
+        </resources>
+
+        <plugins>
+
+            <plugin>
+
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-compiler-plugin</artifactId>
+
+                <version>3.13.0</version>
+
+                <configuration>
+
+                    <source>${maven.compiler.source}</source>
+
+                    <target>${maven.compiler.target}</target>
+
+                    <!-- 明确告知编译器插件源代码在哪里 -->
+
+                    <!-- 注意：如果已经在 <build> 下全局设置了 <sourceDirectory>，这里通常不需要重复 -->
+
+                    <!-- 但为了清晰，或者如果只想针对此插件设置，可以保留 -->
+
+                    <!-- <sourceDirectory>${custom.source.directory}</sourceDirectory> -->
+
+                </configuration>
+
+            </plugin>
+
+            <plugin>
+
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-shade-plugin</artifactId>
+
+                <version>3.2.4</version>
+
+                <executions>
+
+                    <execution>
+
+                        <phase>package</phase>
+
+                        <goals>
+
+                            <goal>shade</goal>
+
+                        </goals>
+
+                        <configuration>
+
+                            <transformers>
+
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+
+                                    <mainClass>${main.class}</mainClass>
+
+                                </transformer>
+
+                            </transformers>
+
+                        </configuration>
+
+                    </execution>
+
+                </executions>
+
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>
+```
+
+
 ### 提示词一 &表结构内容解析
 
 #### 输入
@@ -711,7 +944,18 @@ ORDER BY total_gdp DESC;
 
 #### 输入
 
-给出新的java程序以及编译命令，根据清理后的数据，清理后数据文件路径为C:\APP\CODE\temp\数据治理\Cleaned_Data.csv，连接数据库，建表，规避重复建表，插入数据，数据库配置如下 127.0.0.1:3306 root helloworld data_govern，驱动位置C:\APP\CODE\temp\govern\mysql-connector-j-9.3.0.jar，
+给出新的java程序以及编译命令，根据清理后的数据，清理后数据文件路径为
+
+C:\APP\CODE\temp\数据治理\Cleaned_Data.csv
+
+连接数据库，建表，规避重复建表，插入数据，数据库配置如下
+
+- 数据库ip端口号：127.0.0.1:3306 
+- 用户名称：root 
+- 用户密码：helloworld 
+- 数据库名称：data_govern
+
+驱动位置（**其实可以删除**）C:\APP\CODE\temp\govern\mysql-connector-j-9.3.0.jar，
 
 #### 输入结构
 
@@ -720,6 +964,8 @@ ORDER BY total_gdp DESC;
 3. 建表注意事项
 4. 驱动文件位置(classpath)
 5. 运行命令
+
+这是直接使用单文件直接下载依赖，在命令中使用**类路径提供数据库依赖支持**的运行的方式。
 
 ```cmd
 
@@ -740,83 +986,29 @@ java -cp ".;C:\APP\CODE\temp\govern\mysql-connector-j-9.3.0.jar" CSVToDatabaseIm
 7. 已插入 5000 条记录
 8. 数据导入完成，共插入 5556 条记录
 
-### 环境配置
+![](assets/LLM-data-governance/{D1B60B60-CFE8-4927-A609-0048B4D55BD0}.png)
 
-```cmd
-mvn clean package
-```
+### 自己手动调整过程
 
-```xml
-<project xmlns="http://maven.apache.org/POM/4.0.0"  
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">  
-    <modelVersion>4.0.0</modelVersion>  
-  
-    <groupId>com.example</groupId>  
-    <artifactId>csv-database-importer</artifactId>  
-    <version>1.0-SNAPSHOT</version>  
-  
-    <properties>  
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
-        <maven.compiler.source>1.8</maven.compiler.source>  
-        <maven.compiler.target>1.8</maven.compiler.target>  
-        <main.class>CSVToDatabaseImporter</main.class>  
-        <!-- 新增一个属性来定义您的源文件夹 -->  
-        <custom.source.directory>${project.basedir}</custom.source.directory>  
-    </properties>  
-  
-    <dependencies>  
-        <!-- ... 您的依赖项 ... -->        <dependency>  
-            <groupId>com.mysql</groupId>  
-            <artifactId>mysql-connector-j</artifactId>  
-            <version>9.1.0</version>  
-        </dependency>  
-        <dependency>  
-            <groupId>org.apache.commons</groupId>  
-            <artifactId>commons-csv</artifactId>  
-            <version>1.10.0</version>  
-        </dependency>  
-    </dependencies>  
-  
-    <build>  
-        <!-- 指定源代码目录 -->  
-        <sourceDirectory>${custom.source.directory}</sourceDirectory>  
-        <!-- 如果您也有自定义的测试代码目录，可以类似地添加 <testSourceDirectory> -->        <!-- <testSourceDirectory>${project.basedir}/tests</testSourceDirectory> -->  
-        <plugins>  
-            <plugin>  
-                <groupId>org.apache.maven.plugins</groupId>  
-                <artifactId>maven-compiler-plugin</artifactId>  
-                <version>3.13.0</version>  
-                <configuration>  
-                    <source>${maven.compiler.source}</source>  
-                    <target>${maven.compiler.target}</target>  
-                    <!-- 明确告知编译器插件源代码在哪里 -->  
-                    <!-- 注意：如果已经在 <build> 下全局设置了 <sourceDirectory>，这里通常不需要重复 -->  
-                    <!-- 但为了清晰，或者如果只想针对此插件设置，可以保留 -->  
-                    <!-- <sourceDirectory>${custom.source.directory}</sourceDirectory> -->                </configuration>  
-            </plugin>  
-            <plugin>  
-                <groupId>org.apache.maven.plugins</groupId>  
-                <artifactId>maven-shade-plugin</artifactId>  
-                <version>3.2.4</version>  
-                <executions>  
-                    <execution>  
-                        <phase>package</phase>  
-                        <goals>  
-                            <goal>shade</goal>  
-                        </goals>  
-                        <configuration>  
-                            <transformers>  
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">  
-                                    <mainClass>${main.class}</mainClass>  
-                                </transformer>  
-                            </transformers>  
-                        </configuration>  
-                    </execution>  
-                </executions>  
-            </plugin>  
-        </plugins>  
-    </build>  
-</project>
-```
+#### 服务结构调整
+
+在构建代码初期进行尝试，没有使用直接增量式的服务构建，而是使用分步骤隔离进行运行，每一步进行测试后询问下一个步骤。
+
+因此在最后结合ai的文字提示字节调整几个java类的调用关系，**将三个独立运行的类合并为一个main服务分三步一次性依次调用**。
+
+#### 依赖库的直接指定
+
+在处理csv文件，ai不会主动使用成熟的依赖库，而是使用基本的字符串解析方法，会出现一些符号分割错误歧义。
+
+需要在提供提示词的时候加入**使用成熟csv库的要求**。
+
+#### 依赖版本老旧的问题
+
+在ai生成中，一些依赖库比如mysql的驱动版本不一定是合适适配的，需要结合ide提示进行自己调整。
+
+### 总结
+
+1. DeepSeek模型幻觉较多，直接处理会对数据造成污染，对数据使用java程序进行处理较为稳妥，但需要后期人工抽样校验。
+2. 日常使用deepseek经验之谈，deepseek长短期记忆使用并不可靠，在长度超出一定限制的时候，多次问答会让结果和初期要求产生偏差。最好每一步的提示词都相对隔离完善，避免LLM幻觉以及记忆偏差导致程序出错。
+3. 本次实验并非从0开始构建，我的宿主机提供基本的环境配置，比如java、maven，并且我知晓基本的java项目构建模式，所以框架搭建和环境配置过程基本是单方面我做出要求甚至自己手动调整。而根据以往LLM使用的经验，由于信息的滞后性质，涉及服务器环境配置的问题，比如jdk安装、环境变量配置、服务器系统命令、软件包管理工具、构建工具安装等内容，其回答正确率不高，往往最后还是回归各大官方网站提供的文档。
 
