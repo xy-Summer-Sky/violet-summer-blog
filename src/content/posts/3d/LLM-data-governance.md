@@ -666,18 +666,18 @@ ORDER BY total_gdp DESC;
 
 ## 实践流程展示
 
-### 准备阶段-环境配置
+### 提示词零 & 准备阶段-环境配置
 
-这些都是基于我自己的知识进行直接询问/要求的。
+这些都是基于我自己的知识进行直接询问/要求的，因为这里存在多次询问调整，我整理多次提示词输入如下：
 
-#### 自定义
+#### 提示词-自定义目录结构配置
 
 1. 源代码根目录
 2. 资源目录位置
 3. 构建目标文件位置
 4. main入口类
 
-#### 基本配置
+#### 提示词-基本依赖工具配置
 
 1. 构建工具使用**maven**
 2. 语言使用Java
@@ -686,7 +686,7 @@ ORDER BY total_gdp DESC;
 5. 在代码中提供基本的注释
 6. 提供基本的java和数据库环境
 
-#### 输出结果
+#### LLM输出主要内容
 
 1. maven编译打包命令
 2. jar包执行命令
@@ -901,17 +901,161 @@ java -jar target/csv-database-importer-1.0-SNAPSHOT.jar
 
 ### 提示词一 &表结构内容解析
 
-#### 输入
+#### 提示词输入
 
 给出java程序，解析表结构和行数、列数等基本信息的统计，并给出调用main函数，文件路径为C:\APP\CODE\temp\数据治理\Global_Development_Indicators_2000_2020.csv，输出信息在输出到控制台的同时保存为文本文件
 
-#### 主要结构
+#### 提示词主要结构
 
 1. 编程语言选择
 2. 解析内容
 3. 代码基本格式要求
 4. 文件路径
 5. 输出要求
+
+#### LLM提供的程序
+
+```java
+  
+
+import java.io.FileWriter;
+
+import java.io.IOException;
+
+import java.io.PrintWriter;
+
+import java.nio.file.Files;
+
+import java.nio.file.Paths;
+
+import java.util.List;
+
+  
+
+public class CSVAnalyzer {
+
+  
+
+    private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(CSVAnalyzer.class);
+
+  
+
+    public CSVAnalyzer() {
+
+        // 构造函数
+
+        super(); // 显式调用父类 Object 的构造函数
+
+    }
+
+  
+
+    ;
+
+  
+
+    public void CSV_analyzer_api() {
+
+        String filePath = "C:\\APP\\CODE\\temp\\govern\\Global_Development_Indicators_2000_2020.csv";
+
+        String outputPath = "C:\\APP\\CODE\\temp\\govern\\CSV_Analysis_Result.txt";
+
+  
+
+        try {
+
+            // 读取CSV文件
+
+            List<String> lines = Files.readAllLines(Paths.get(filePath));
+
+  
+
+            if (lines.isEmpty()) {
+
+                System.out.println("CSV文件为空");
+
+                logger.warn("CSV文件为空: {}", filePath);
+
+                return;
+
+            }
+
+  
+
+            // 获取列名（第一行）
+
+            String[] headers = lines.get(0).split(",");
+
+            int columnCount = headers.length;
+
+            int rowCount = lines.size() - 1; // 减去标题行
+
+  
+
+            // 构建统计信息
+
+            StringBuilder result = new StringBuilder();
+
+            result.append("CSV文件分析结果:\n");
+
+            result.append("文件路径: ").append(filePath).append("\n");
+
+            result.append("总行数: ").append(rowCount).append("\n");
+
+            result.append("总列数: ").append(columnCount).append("\n\n");
+
+            result.append("列结构信息:\n");
+
+            logger.info("列结构信息: 总行数={}, 总列数={}", rowCount, columnCount);
+
+  
+
+            // 添加列名和序号
+
+            for (int i = 0; i < headers.length; i++) {
+
+                result.append(i + 1).append(". ").append(headers[i]).append("\n");
+
+                logger.info("列 {}: {}", i + 1, headers[i]);
+
+            }
+
+  
+
+            // 输出到控制台
+
+            System.out.println(result.toString());
+
+  
+
+            // 写入到文件
+
+            try (PrintWriter writer = new PrintWriter(new FileWriter(outputPath))) {
+
+                writer.println(result.toString());
+
+                System.out.println("分析结果已保存到: " + outputPath);
+
+                logger.info("分析结果已保存到: {}", outputPath);
+
+            }
+
+  
+
+        } catch (IOException e) {
+
+            System.err.println("处理文件时出错: " + e.getMessage());
+
+            logger.error("处理文件时出错: {}", e.getMessage());
+
+            e.printStackTrace();
+
+        }
+
+    }
+
+}
+```
 
 #### 处理结果
 
@@ -922,16 +1066,307 @@ java -jar target/csv-database-importer-1.0-SNAPSHOT.jar
 
 ### 提示词二 &询问并执行简单数据清洗程序
 
-#### 输入
+#### 提示词输入
 
 清理数据异常值，比如某一行全为空，并进行空值统计，清理后的数据和被清理的数据分别保存到两个文件中
 
-#### 主要结构
+#### 提示词主要结构
 
 1. 清理要求
 2. 输出要求
 
-#### 处理结果
+#### llm提供的程序
+
+```java
+  
+
+import java.io.FileWriter;
+
+import java.io.IOException;
+
+import java.io.PrintWriter;
+
+import java.nio.file.Files;
+
+import java.nio.file.Paths;
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+  
+
+import org.slf4j.Logger;
+
+import org.slf4j.LoggerFactory;
+
+  
+
+public class CSVDataCleaner {
+
+  
+
+    private static final Logger logger = LoggerFactory.getLogger(CSVDataCleaner.class);
+
+  
+
+    public void data_cleaner_api() {
+
+  
+
+        String filePath = "C:\\APP\\CODE\\temp\\govern\\Global_Development_Indicators_2000_2020.csv";
+
+        String cleanDataPath = "C:\\APP\\CODE\\temp\\govern\\Cleaned_Data.csv";
+
+        String removedDataPath = "C:\\APP\\CODE\\temp\\govern\\Removed_Data.csv";
+
+        String statsPath = "C:\\APP\\CODE\\temp\\govern\\Cleaning_Statistics.txt";
+
+  
+
+        try {
+
+            // 读取CSV文件
+
+            List<String> lines = Files.readAllLines(Paths.get(filePath));
+
+  
+
+            if (lines.isEmpty()) {
+
+                System.out.println("CSV文件为空");
+
+                logger.warn("CSV文件为空: {}", filePath);
+
+                return;
+
+            }
+
+  
+
+            String[] headers = lines.get(0).split(",");
+
+            int columnCount = headers.length;
+
+  
+
+            List<String> cleanData = new ArrayList<>();
+
+            List<String> removedData = new ArrayList<>();
+
+            int[] columnNullCounts = new int[columnCount];
+
+            int totalNullValues = 0;
+
+            int totalRowsRemoved = 0;
+
+  
+
+            // 添加标题行到两个文件
+
+            cleanData.add(lines.get(0));
+
+            removedData.add(lines.get(0));
+
+  
+
+            // 分析数据
+
+            for (int i = 1; i < lines.size(); i++) {
+
+                String line = lines.get(i);
+
+                String[] values = line.split(",");
+
+  
+
+                boolean isRowEmpty = true;
+
+                boolean hasNullValues = false;
+
+  
+
+                // 检查行是否全空
+
+                for (String value : values) {
+
+                    if (!value.trim().isEmpty()) {
+
+                        isRowEmpty = false;
+
+                        break;
+
+                    }
+
+                }
+
+  
+
+                // 统计空值
+
+                if (!isRowEmpty) {
+
+                    for (int j = 0; j < values.length && j < columnCount; j++) {
+
+                        if (values[j].trim().isEmpty()) {
+
+                            columnNullCounts[j]++;
+
+                            totalNullValues++;
+
+                            hasNullValues = true;
+
+                        }
+
+                    }
+
+                }
+
+  
+
+                // 分离数据
+
+                if (isRowEmpty) {
+
+                    removedData.add(line);
+
+                    totalRowsRemoved++;
+
+                } else {
+
+                    cleanData.add(line);
+
+                }
+
+            }
+
+  
+
+            // 写入清理后的数据
+
+            writeToFile(cleanData, cleanDataPath);
+
+            // 写入被移除的数据
+
+            writeToFile(removedData, removedDataPath);
+
+  
+
+            // 生成统计信息
+
+            StringBuilder stats = new StringBuilder();
+
+            stats.append("数据清理统计报告\n");
+
+            stats.append("=================================\n");
+
+            stats.append("原始文件: ").append(filePath).append("\n");
+
+            stats.append("总行数(含标题): ").append(lines.size()).append("\n");
+
+            stats.append("清理后数据行数: ").append(cleanData.size() - 1).append("\n");
+
+            stats.append("移除的行数: ").append(totalRowsRemoved).append("\n");
+
+            stats.append("总空值数量: ").append(totalNullValues).append("\n\n");
+
+  
+
+            stats.append("各列空值统计:\n");
+
+            logger.info("各列空值统计:");
+
+            logger.info("=================================");
+
+            logger.info("原始文件: {}", filePath);
+
+            logger.info("总行数(含标题): {}", lines.size());
+
+            logger.info("清理后数据行数: {}", cleanData.size() - 1);
+
+            logger.info("移除的行数: {}", totalRowsRemoved);
+
+            logger.info("总空值数量: {}", totalNullValues);
+
+            logger.info("各列空值统计:");
+
+            // 输出各列空值统计
+
+            logger.info("=================================");
+
+            for (int i = 0; i < columnCount; i++) {
+
+                stats.append(String.format("%-3d. %-30s: %d 空值",
+
+                        i + 1,
+
+                        headers[i].trim(),
+
+                        columnNullCounts[i])).append("\n");
+
+                logger.info("{}: {} 空值", headers[i].trim(), columnNullCounts[i]);
+
+            }
+
+  
+
+            // 输出统计信息到控制台和文件
+
+            System.out.println(stats.toString());
+
+  
+
+            try (PrintWriter writer = new PrintWriter(new FileWriter(statsPath))) {
+
+                writer.println(stats.toString());
+
+                System.out.println("统计信息已保存到: " + statsPath);
+
+                logger.info("统计信息已保存到: {}", statsPath);
+
+            }
+
+  
+
+            System.out.println("清理后的数据已保存到: " + cleanDataPath);
+
+            logger.info("清理后的数据已保存到: {}", cleanDataPath);
+
+            System.out.println("被移除的数据已保存到: " + removedDataPath);
+
+            logger.info("被移除的数据已保存到: {}", removedDataPath);
+
+        } catch (IOException e) {
+
+            System.err.println("处理文件时出错: " + e.getMessage());
+
+            logger.error("处理文件时出错: {}", e.getMessage());
+
+            e.printStackTrace();
+
+        }
+
+    }
+
+  
+
+    private static void writeToFile(List<String> data, String filePath) throws IOException {
+
+        try (PrintWriter writer = new PrintWriter(new FileWriter(filePath))) {
+
+            for (String line : data) {
+
+                writer.println(line);
+
+            }
+
+        }
+
+    }
+
+}
+```
+#### llm提供的程序运行结果
 
 1. 总行数(含标题): 5557  
 2. 清理后数据行数: 5556  
@@ -942,7 +1377,7 @@ java -jar target/csv-database-importer-1.0-SNAPSHOT.jar
 
 ### 提示词三 & 数据插入
 
-#### 输入
+#### 提示词输入
 
 给出新的java程序以及编译命令，根据清理后的数据，清理后数据文件路径为
 
@@ -957,7 +1392,7 @@ C:\APP\CODE\temp\数据治理\Cleaned_Data.csv
 
 驱动位置（**其实可以删除**）C:\APP\CODE\temp\govern\mysql-connector-j-9.3.0.jar，
 
-#### 输入结构
+#### 提示词主要结构
 
 1. 待插入数据文件指定
 2. 数据库配置（包括hostname、数据库名称等）
@@ -975,7 +1410,502 @@ java -cp ".;C:\APP\CODE\temp\govern\mysql-connector-j-9.3.0.jar" CSVToDatabaseIm
 
 ```
 
-#### 输出结果
+#### LLM提供的程序
+
+```java
+  
+
+import java.io.Reader;
+
+import java.nio.file.Files;
+
+import java.nio.file.Paths;
+
+import java.sql.Connection;
+
+import java.sql.DatabaseMetaData;
+
+import java.sql.DriverManager;
+
+import java.sql.PreparedStatement;
+
+import java.sql.ResultSet;
+
+import java.sql.SQLException;
+
+import java.sql.Statement;
+
+import java.sql.Types;
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+  
+
+import org.apache.commons.csv.CSVFormat;
+
+import org.apache.commons.csv.CSVParser;
+
+import org.apache.commons.csv.CSVRecord;
+
+import org.slf4j.Logger;
+
+import org.slf4j.LoggerFactory;
+
+  
+
+public class CSVToDatabaseImporter {
+
+  
+
+    private static final Logger logger = LoggerFactory.getLogger(CSVToDatabaseImporter.class);
+
+  
+
+    private static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/data_govern";
+
+    private static final String DB_USER = "root";
+
+    private static final String DB_PASSWORD = "helloworld";
+
+    private static final String CSV_FILE_PATH = "C:\\APP\\CODE\\temp\\govern\\Cleaned_Data.csv";
+
+    private static final String DRIVER_CLASS = "com.mysql.cj.jdbc.Driver";
+
+  
+
+    public static void main(String[] args) {
+
+        Connection connection = null;
+
+        Statement statement = null;
+
+        PreparedStatement insertPstmt = null;
+
+        CSVAnalyzer step1 = new CSVAnalyzer();
+
+        step1.CSV_analyzer_api(); // 调用CSV分析API
+
+        CSVDataCleaner step2 = new CSVDataCleaner();
+
+        step2.data_cleaner_api(); // 调用数据清理API
+
+        logger.info("开始导入CSV数据到数据库...");
+
+  
+
+        try {
+
+            Class.forName(DRIVER_CLASS);
+
+  
+
+            try ( // 使用 Apache Commons CSV 解析
+
+                    Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH)); CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT
+
+                    .withFirstRecordAsHeader() // 将第一行视为表头
+
+                    .withIgnoreHeaderCase()
+
+                    .withTrim())) {
+
+  
+
+                List<String> headersList = csvParser.getHeaderNames();
+
+                if (headersList == null || headersList.isEmpty()) {
+
+  
+
+                    logger.error("CSV文件没有表头或为空");
+
+                    csvParser.close();
+
+                    reader.close();
+
+                    return;
+
+                }
+
+                String[] headers = headersList.toArray(new String[0]);
+
+                String tableName = "global_development_indicators";
+
+  
+
+                connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+
+                connection.setAutoCommit(false);
+
+                logger.info("成功连接到数据库: {}", DB_URL);
+
+  
+
+                statement = connection.createStatement();
+
+                if (!tableExists(connection, tableName)) {
+
+                    createTable(statement, tableName, headers);
+
+                    logger.info("表 {} 创建成功", tableName);
+
+                } else {
+
+                    logger.info("表 {} 已存在，跳过创建", tableName);
+
+                }
+
+                connection.commit();
+
+  
+
+                String insertSQL = generateInsertSQL(tableName, headers);
+
+                insertPstmt = connection.prepareStatement(insertSQL);
+
+  
+
+                short batchSize = 1000;
+
+                int currentBatchCount = 0;
+
+                int totalInsertedCount = 0;
+
+                int totalSkippedCount = 0;
+
+                long totalRecordsInCsv = 0;
+
+  
+
+                for (CSVRecord csvRecord : csvParser) {
+
+                    totalRecordsInCsv++;
+
+                    // CSVRecord 的大小应该与表头大小一致，因为它基于表头解析
+
+                    // 如果CSV行比表头短，缺失的列会根据CSVFormat的策略处理（通常是null或空字符串）
+
+                    // 如果CSV行比表头长，多余的列可能会被忽略，或导致错误，取决于CSVFormat配置
+
+  
+
+                    boolean recordExists = false;
+
+                    if (headers.length > 0) {
+
+                        StringBuilder selectSqlBuilder = new StringBuilder("SELECT 1 FROM ");
+
+                        selectSqlBuilder.append(tableName).append(" WHERE ");
+
+                        List<String> paramsForCheckQuery = new ArrayList<>();
+
+  
+
+                        for (int j = 0; j < headers.length; j++) {
+
+                            String columnName = headers[j].trim().replaceAll("[^a-zA-Z0-9_]", "_");
+
+                            selectSqlBuilder.append(columnName);
+
+  
+
+                            String value = null;
+
+                            if (csvRecord.isSet(headers[j])) { // 检查列是否存在于记录中
+
+                                value = csvRecord.get(headers[j]); // 按列名获取值
+
+                            }
+
+  
+
+                            if (value != null && !value.isEmpty()) {
+
+                                selectSqlBuilder.append(" = ?");
+
+                                paramsForCheckQuery.add(value.trim());
+
+                            } else {
+
+                                // 如果值为 null 或空字符串，我们将其视为数据库中的 NULL
+
+                                // 注意：如果CSV中的空字符串 "" 应该被视为 "" 而不是 NULL，则需要调整此逻辑
+
+                                selectSqlBuilder.append(" IS NULL");
+
+                            }
+
+  
+
+                            if (j < headers.length - 1) {
+
+                                selectSqlBuilder.append(" AND ");
+
+                            }
+
+                        }
+
+                        // System.out.println("Check SQL: " + selectSqlBuilder.toString()); // 调试用
+
+                        // System.out.println("Check Params: " + paramsForCheckQuery); // 调试用
+
+  
+
+                        try (PreparedStatement checkStmt = connection.prepareStatement(selectSqlBuilder.toString())) {
+
+                            for (int paramIdx = 0; paramIdx < paramsForCheckQuery.size(); paramIdx++) {
+
+                                checkStmt.setString(paramIdx + 1, paramsForCheckQuery.get(paramIdx));
+
+                            }
+
+                            try (ResultSet rs = checkStmt.executeQuery()) {
+
+                                if (rs.next()) {
+
+                                    recordExists = true;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+  
+
+                    if (!recordExists) {
+
+                        for (int k = 0; k < headers.length; k++) {
+
+                            String value = null;
+
+                            if (csvRecord.isSet(headers[k])) {
+
+                                value = csvRecord.get(headers[k]);
+
+                            }
+
+  
+
+                            if (value != null && !value.isEmpty()) {
+
+                                insertPstmt.setString(k + 1, value.trim());
+
+                            } else {
+
+                                insertPstmt.setNull(k + 1, Types.VARCHAR);
+
+                            }
+
+                        }
+
+                        insertPstmt.addBatch();
+
+                        currentBatchCount++;
+
+                        totalInsertedCount++;
+
+  
+
+                        if (currentBatchCount % batchSize == 0) {
+
+                            insertPstmt.executeBatch();
+
+                            connection.commit();
+
+                            logger.info("已执行一批插入，处理 {} 条记录，累计插入 {} 条。", currentBatchCount, totalInsertedCount);
+
+                            currentBatchCount = 0;
+
+                        }
+
+                    } else {
+
+                        totalSkippedCount++;
+
+                    }
+
+                }
+
+  
+
+                if (currentBatchCount > 0) {
+
+                    insertPstmt.executeBatch();
+
+                    connection.commit();
+
+                    logger.info("已执行最后一批插入，处理 {} 条记录，累计插入 {} 条。", currentBatchCount, totalInsertedCount);
+
+                }
+
+                logger.info("数据导入完成。共处理 {} 条CSV记录。实际插入 {} 条新记录。跳过 {} 条已存在的记录。",
+
+                        totalRecordsInCsv, totalInsertedCount, totalSkippedCount);
+
+  
+
+            }
+
+  
+
+        } catch (Exception e) {
+
+  
+
+            logger.error("数据导入过程中发生错误: {}", e.getMessage(), e);
+
+            if (connection != null) {
+
+                try {
+
+                    connection.rollback();
+
+                } catch (SQLException se) {
+
+  
+
+                    logger.error("回滚失败: {}", se.getMessage(), se);
+
+                }
+
+            }
+
+        } finally {
+
+            try {
+
+                if (insertPstmt != null) {
+
+                    insertPstmt.close();
+
+                }
+
+                if (statement != null) {
+
+                    statement.close();
+
+                }
+
+                if (connection != null) {
+
+                    connection.setAutoCommit(true);
+
+                    connection.close();
+
+                }
+
+            } catch (SQLException se) {
+
+                se.printStackTrace();
+
+            }
+
+        }
+
+    }
+
+  
+
+    private static boolean tableExists(Connection conn, String tableName) throws SQLException {
+
+        DatabaseMetaData meta = conn.getMetaData();
+
+        try (ResultSet rs = meta.getTables(null, null, tableName, new String[]{"TABLE"})) {
+
+            return rs.next();
+
+        }
+
+    }
+
+  
+
+    private static void createTable(Statement stmt, String tableName, String[] headers) throws SQLException {
+
+        StringBuilder sql = new StringBuilder("CREATE TABLE IF NOT EXISTS ");
+
+        sql.append(tableName).append(" (");
+
+  
+
+        for (int i = 0; i < headers.length; i++) {
+
+            String columnName = headers[i].trim().replaceAll("[^a-zA-Z0-9_]", "_");
+
+            if (columnName.isEmpty()) {
+
+                columnName = "column_" + (i + 1);
+
+            }
+
+            sql.append(columnName).append(" VARCHAR(255)");
+
+            if (i < headers.length - 1) {
+
+                sql.append(", ");
+
+            }
+
+        }
+
+        sql.append(")");
+
+        stmt.executeUpdate(sql.toString());
+
+    }
+
+  
+
+    private static String generateInsertSQL(String tableName, String[] headers) {
+
+        StringBuilder sql = new StringBuilder("INSERT INTO ");
+
+        sql.append(tableName).append(" (");
+
+        StringBuilder placeholders = new StringBuilder();
+
+  
+
+        for (int i = 0; i < headers.length; i++) {
+
+            String columnName = headers[i].trim().replaceAll("[^a-zA-Z0-9_]", "_");
+
+            if (columnName.isEmpty()) {
+
+                columnName = "column_" + (i + 1);
+
+            }
+
+            sql.append(columnName);
+
+            placeholders.append("?");
+
+            if (i < headers.length - 1) {
+
+                sql.append(", ");
+
+                placeholders.append(", ");
+
+            }
+
+        }
+
+        sql.append(") VALUES (").append(placeholders).append(")");
+
+        return sql.toString();
+
+    }
+
+}
+```
+
+
+#### LLM程序运行输出结果
 
 1. 成功连接到数据库
 2. 表 global_development_indicators 创建成功
@@ -994,13 +1924,13 @@ java -cp ".;C:\APP\CODE\temp\govern\mysql-connector-j-9.3.0.jar" CSVToDatabaseIm
 
 在构建代码初期进行尝试，没有使用直接增量式的服务构建，而是使用分步骤隔离进行运行，每一步进行测试后询问下一个步骤。
 
-因此在最后结合ai的文字提示字节调整几个java类的调用关系，**将三个独立运行的类合并为一个main服务分三步一次性依次调用**。
+因此在最后结合ai的文字提示调整几个java类的调用关系，**将三个独立运行的类合并为一个main服务分三步一次性依次调用**。
 
 #### 依赖库的直接指定
 
 在处理csv文件，ai不会主动使用成熟的依赖库，而是使用基本的字符串解析方法，会出现一些符号分割错误歧义。
 
-需要在提供提示词的时候加入**使用成熟csv库的要求**。
+需要在提供提示词的时候指定**使用成熟csv库的**。
 
 #### 依赖版本老旧的问题
 
