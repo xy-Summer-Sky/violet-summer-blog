@@ -320,7 +320,7 @@ mindmap
 
 https://www.kaggle.com/datasets/michaelmatta0/global-development-indicators-2000-2020
 
-## LLM提示词处理流程
+## llm提示词处理流程
 
 1. Excel表格识别/抽取(指定哪些列、行)
 2. 数值校验、补全等
@@ -684,7 +684,7 @@ ORDER BY total_gdp DESC;
 5. 在代码中提供基本的注释
 6. 提供基本的java和数据库环境
 
-#### LLM输出主要内容
+#### llm输出主要内容
 
 1. maven编译打包命令
 2. jar包执行命令
@@ -911,7 +911,7 @@ java -jar target/csv-database-importer-1.0-SNAPSHOT.jar
 4. 文件路径
 5. 输出要求
 
-#### LLM提供的程序
+#### llm提供的程序
 
 ```java
   
@@ -1408,7 +1408,7 @@ java -cp ".;C:\APP\CODE\temp\govern\mysql-connector-j-9.3.0.jar" CSVToDatabaseIm
 
 ```
 
-#### LLM提供的程序
+#### llm提供的程序
 
 ```java
   
@@ -1903,7 +1903,7 @@ public class CSVToDatabaseImporter {
 ```
 
 
-#### LLM程序运行输出结果
+#### llm程序运行输出结果
 
 1. 成功连接到数据库
 2. 表 global_development_indicators 创建成功
@@ -1914,7 +1914,7 @@ public class CSVToDatabaseImporter {
 7. 已插入 5000 条记录
 8. 数据导入完成，共插入 5556 条记录
 
-![](./assets/LLM-data-governance/{D1B60B60-CFE8-4927-A609-0048B4D55BD0}.png)
+![](./assets/llm-data-governance/{D1B60B60-CFE8-4927-A609-0048B4D55BD0}.png)
 
 ### 自己手动调整过程
 
