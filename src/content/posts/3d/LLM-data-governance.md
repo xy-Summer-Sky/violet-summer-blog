@@ -10,7 +10,7 @@ image: '/violet.png'
 
 # 概念理解
 
-![](./assets/llm-data-governance/be96a4d193ea7a10e56323409dc269c.png)
+![概念图](./assets/llm-data-governance/be96a4d193ea7a10e56323409dc269c.png)
 
 ## 什么是数据治理？为什么要做数据治理
 
