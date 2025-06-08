@@ -18,17 +18,17 @@ image: '/violet.png'
 
 图片中空白区域块以及内部的弯折的小路被视为大公园
 
-![](assets/3d-algorithm/file-20250607161101243.png)
+![](./assets/3d-algorithm/file-20250607161101243.png)
 
 大公园放大后效果如下
 
-![](assets/3d-algorithm/file-20250607161259079.png)
+![](./assets/3d-algorithm/file-20250607161259079.png)
 
 ### 小公园
 
 小公园选取小的单元直接视为公园，没有道路会经过内容
 
-![](assets/3d-algorithm/file-20250607161359345.png)
+![](./assets/3d-algorithm/file-20250607161359345.png)
 
 
 
@@ -41,42 +41,42 @@ image: '/violet.png'
 5. svg路径数据的试试右侧展示并且可以展示导出
 
 
-![](assets/3d-algorithm/file-20250607161611900.png)
+![](./assets/3d-algorithm/file-20250607161611900.png)
 
 ### svg编辑
 
-![](assets/3d-algorithm/file-20250607162559273.png)
+![](./assets/3d-algorithm/file-20250607162559273.png)
 
 ### 层次关系构建
 
 #### 交互
 
-![](assets/3d-algorithm/file-20250607162623326.png)
+![](./assets/3d-algorithm/file-20250607162623326.png)
 
 #### 层次数据管理
 
-![](assets/3d-algorithm/file-20250607162859010.png)
+![](./assets/3d-algorithm/file-20250607162859010.png)
 ### svg路径数据展示
 
-![](assets/3d-algorithm/file-20250607162746533.png)
+![](./assets/3d-algorithm/file-20250607162746533.png)
 ## 轮廓到模型生成算法完善
 
 ### 支持多层嵌套
 
-![](assets/3d-algorithm/file-20250607162223295.png)
+![](./assets/3d-algorithm/file-20250607162223295.png)
 
 
 ### 内外高度起伏
 
 支持内外高度起伏以及凹形内嵌轮廓
 
-![](assets/3d-algorithm/file-20250607162322017.png)
+![](./assets/3d-algorithm/file-20250607162322017.png)
 
 ### 兄弟内部轮廓
 
 内嵌轮廓支持多个兄弟内部轮廓，兼容内陷区域和外凸区域
 
-![](assets/3d-algorithm/file-20250607162416605.png)
+![](./assets/3d-algorithm/file-20250607162416605.png)
 
 ### 极端情况
 
@@ -84,7 +84,7 @@ image: '/violet.png'
 2. 并且形状较为不规则
 3. 内嵌轮廓形状不规则
 
-![](assets/3d-algorithm/file-20250607163306724.png)
+![](./assets/3d-algorithm/file-20250607163306724.png)
 
 # 实现细节-数学解释
 

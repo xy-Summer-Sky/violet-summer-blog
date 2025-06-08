@@ -9,7 +9,7 @@ image: '/violet.png'
 ---
 # 概念理解
 
-![](assets/llm-data-governance/be96a4d193ea7a10e56323409dc269c%201.png)
+![](./assets/llm-data-governance/be96a4d193ea7a10e56323409dc269c%201.png)
 
 ## 什么是数据治理？为什么要做数据治理
 
@@ -49,7 +49,7 @@ image: '/violet.png'
 - 一致性：多个业务数仓间的公共数据，必须在各个数据仓库中保持一致
 - 及时性：数据能及时产出和预警
 
-![](assets/llm-data-governance/file-20250518153934253.png)
+![](./assets/llm-data-governance/file-20250518153934253.png)
 
 ### 元数据管理
 
@@ -311,7 +311,7 @@ mindmap
 
 # 数据录入DeepSeek尝试
 
-![](assets/llm-data-governance/{CD26FA0B-F77B-44FD-A072-1C41F161D1F0}.png)
+![](./assets/llm-data-governance/{CD26FA0B-F77B-44FD-A072-1C41F161D1F0}.png)
 
 ## 数据来源
 
@@ -414,7 +414,7 @@ CREATE TABLE global_development_indicators (
 
 ##### 插入结果
 
-![](assets/llm-data-governance/{B29771A8-36D9-4388-BF9A-D015BD1CD355}.png)
+![](./assets/llm-data-governance/{B29771A8-36D9-4388-BF9A-D015BD1CD355}.png)
 #### 数据插入SQL
 
 ```sql
@@ -551,7 +551,7 @@ region_economic.to_csv('cleaned_region_economic_data.csv', index=False)
 
 ##### 创建结果
 
-![](assets/llm-data-governance/{914082FE-862E-4F86-8CC7-D1F7ECCB8409}.png)
+![](./assets/llm-data-governance/{914082FE-862E-4F86-8CC7-D1F7ECCB8409}.png)
 
 #### 数据库表设计语句
 
@@ -634,7 +634,7 @@ ORDER BY total_gdp DESC;
 
 各个区域GDP总量对比
 
-![](assets/llm-data-governance/{31238970-0267-45AB-93A8-C9FC699D0533}.png)
+![](./assets/llm-data-governance/{31238970-0267-45AB-93A8-C9FC699D0533}.png)
 
 ## 使用总结
 
@@ -659,7 +659,7 @@ ORDER BY total_gdp DESC;
 9. 根据验证结果持久化代码为应用/服务
 
 
-![](assets/llm-data-governance/file-20250520233443984.png)
+![](./assets/llm-data-governance/file-20250520233443984.png)
 
 ## 实践流程展示
 
@@ -1913,7 +1913,7 @@ public class CSVToDatabaseImporter {
 7. 已插入 5000 条记录
 8. 数据导入完成，共插入 5556 条记录
 
-![](assets/LLM-data-governance/{D1B60B60-CFE8-4927-A609-0048B4D55BD0}.png)
+![](./assets/LLM-data-governance/{D1B60B60-CFE8-4927-A609-0048B4D55BD0}.png)
 
 ### 自己手动调整过程
 
