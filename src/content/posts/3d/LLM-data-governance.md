@@ -50,7 +50,7 @@ image: '/violet.png'
 - 一致性：多个业务数仓间的公共数据，必须在各个数据仓库中保持一致
 - 及时性：数据能及时产出和预警
 
-![](./assets/llm-data-governance/file-20250518153934253.png)
+![](./assets/llm-data-governance/20250518153934253.png)
 
 ### 元数据管理
 
@@ -660,7 +660,7 @@ ORDER BY total_gdp DESC;
 9. 根据验证结果持久化代码为应用/服务
 
 
-![](./assets/llm-data-governance/file-20250520233443984.png)
+![](./assets/llm-data-governance/20250520233443984.png)
 
 ## 实践流程展示
 
