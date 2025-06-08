@@ -319,9 +319,6 @@ mindmap
 
 https://www.kaggle.com/datasets/michaelmatta0/global-development-indicators-2000-2020
 
-下载数据：
-
-![](assets/llm-data-governance/Global_Development_Indicators_2000_2020.csv)
 ## LLM提示词处理流程
 
 1. Excel表格识别/抽取(指定哪些列、行)
