@@ -156,7 +156,7 @@ $$
 
 
 
-
+## 曲面积分
 ### 问题重述
 
 计算曲面积分：
@@ -271,3 +271,84 @@ $$
 $$
 \boxed{ -\frac{\pi}{2} }
 $$
+
+
+# 极限
+
+关于定义，主要来自课本，因为需要极高的规范性
+
+## 极限的定义
+
+极限是微积分和数学分析中的核心概念。以下是几种基本类型的极限定义：
+
+### 1. 数列的极限 (Limit of a Sequence)
+
+设 $\{a_n\}$ 是一个实数数列。如果存在一个实数 $L$，使得 $\forall \epsilon > 0$，$\exists N \in \mathbb{Z}^+$（$N$ 通常依赖于 $\epsilon$），使得当 $n > N$ 时，不等式
+$$
+|a_n - L| < \epsilon
+$$
+都成立，则称数列 $\{a_n\}$ **收敛** (converges) 于 $L$，或者说 $L$ 是数列 $\{a_n\}$ 的**极限** (limit)。记作：
+$$
+\lim_{n \to \infty} a_n = L \quad \text{或} \quad a_n \to L \quad (n \to \infty)
+$$
+如果这样的 $L$ 不存在，则称数列 $\{a_n\}$ **发散** (diverges)。
+
+**符号解释**:
+-   $\{a_n\}$: 表示一个数列，例如 $a_1, a_2, a_3, \dots$
+-   $L$: 数列的极限值。
+-   $\epsilon$ (epsilon): 一个任意小的正数，表示 $a_n$ 与 $L$ 之间的容许误差。
+-   $N$: 一个正整数，表示从数列的第 $N+1$ 项开始，所有项都满足误差要求。
+-   $|a_n - L|$: $a_n$ 与 $L$ 之间距离的绝对值。
+-   $\lim_{n \to \infty}$: 表示当 $n$ 趋向于无穷大时的极限。
+-   $\forall$: 全称量词，表示“对于任意的”或“对于所有的”。
+-   $\exists$: 存在量词，表示“存在”。
+-   $\mathbb{Z}^+$: 正整数集合。
+
+### 函数的极限 (Limit of a Function of One Variable)
+
+设函数 $f(x)$ 在点 $x_0$ 的某个去心邻域内有定义。如果存在一个常数 $A$，使得 $\forall \epsilon > 0$，$\exists \delta > 0$（$\delta$ 通常依赖于 $\epsilon$），使得当 $\forall x:$  $0 < |x - x_0| < \delta$ 时，不等式
+$$
+|f(x) - A| < \epsilon
+$$
+都成立，则称常数 $A$ 为函数 $f(x)$ 当 $x \to x_0$ 时的**极限**。记作：
+$$
+\lim_{x \to x_0} f(x) = A \quad \text{或} \quad f(x) \to A \quad (x \to x_0)
+$$
+
+#### 单侧极限 (One-Sided Limits)
+
+- **右极限**: 如果$\forall \epsilon > 0$，使得$\forall x: 0<x-a<\delta$，都有 $|f(x)-A|< \epsilon $，则称A是$f(x)$当$x \to a$时的右极限，记作
+$$
+\lim_{x \to a^+} f(x) = A
+$$
+
+-   **左极限 (Left-hand limit)**: 当 $x \to x_0^-$ (从小于 $x_0$ 的方向趋近 $x_0$) 时，$f(x) \to A$。定义为：$\forall \epsilon > 0$，$\exists \delta > 0$，使得当 $x_0 - \delta < x < x_0$ 时，$|f(x) - A| < \epsilon$。记作 $\lim_{x \to x_0^-} f(x) = A$。
+
+
+函数 $f(x)$ 在 $x \to x_0$ 时的极限存在的充分必要条件是左极限和右极限都存在且相等，即 $\lim_{x \to x_0^-} f(x) = \lim_{x \to x_0^+} f(x) = A$。
+
+### 二元函数的极限 (Limit of a Function of Two Variables)
+
+设函数 $z = f(x,y)$ 的定义域为 $D \subseteq \mathbb{R}^2$，$P_0(x_0, y_0)$ 是 $D$ 的一个聚点。如果存在一个常数 $A$，使得 $\forall \epsilon > 0$，$\exists \delta > 0$，使得当点 $P(x,y) \in D$ 且满足 $0 < ||P - P_0|| < \delta$ 时（即 $0 < \sqrt{(x-x_0)^2 + (y-y_0)^2} < \delta$），不等式
+
+$$
+|f(x,y) - A| < \epsilon
+$$
+都成立，则称常数 $A$ 为函数 $f(x,y)$ 当点 $P(x,y)$ 趋向于点 $P_0(x_0, y_0)$ 时的**极限**。记作：
+$$
+\lim_{(x,y) \to (x_0,y_0)} f(x,y) = A \quad \text{或} \quad \lim_{P \to P_0} f(P) = A
+$$
+
+**符号解释**:
+-   $f(x,y)$: 定义在变量 $x, y$ 上的二元函数。
+-   $P_0(x_0, y_0)$: 点 $(x,y)$ 趋近的点。
+-   $A$: 函数的极限值。
+-   $||P - P_0||$: 点 $P(x,y)$ 与点 $P_0(x_0,y_0)$ 之间的欧氏距离。
+-   $0 < ||P - P_0|| < \delta$: 表示点 $P$ 在以 $P_0$ 为中心的半径为 $\delta$ 的去心邻域内。
+-   $\forall$: 全称量词。
+-   $\exists$: 存在量词。
+-   $\mathbb{R}^2$: 二维实数空间。
+
+与一元函数不同，二元函数中点 $P(x,y)$ 趋向于 $P_0(x_0,y_0)$ 的路径是任意的。如果沿不同路径趋近 $P_0$ 时函数 $f(x,y)$ 趋向不同的值，或者沿某条路径趋近时极限不存在，则函数 $f(x,y)$ 在 $P_0$ 点的极限不存在。
+
+% // ...existing code...
