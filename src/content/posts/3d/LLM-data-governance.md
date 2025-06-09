@@ -7,9 +7,10 @@ category: ai
 draft: false
 image: '/violet.png'
 ---
+
 # 概念理解
 
-![](assets/llm-data-governance/be96a4d193ea7a10e56323409dc269c%201.png)
+![概念图](./assets/llm-data-governance/be96a4d193ea7a10e56323409dc269c.png)
 
 ## 什么是数据治理？为什么要做数据治理
 
@@ -49,7 +50,7 @@ image: '/violet.png'
 - 一致性：多个业务数仓间的公共数据，必须在各个数据仓库中保持一致
 - 及时性：数据能及时产出和预警
 
-![](assets/llm-data-governance/file-20250518153934253.png)
+![](./assets/llm-data-governance/20250518153934253.png)
 
 ### 元数据管理
 
@@ -311,7 +312,7 @@ mindmap
 
 # 数据录入DeepSeek尝试
 
-![](assets/llm-data-governance/{CD26FA0B-F77B-44FD-A072-1C41F161D1F0}.png)
+![](./assets/llm-data-governance/{CD26FA0B-F77B-44FD-A072-1C41F161D1F0}.png)
 
 ## 数据来源
 
@@ -319,10 +320,7 @@ mindmap
 
 https://www.kaggle.com/datasets/michaelmatta0/global-development-indicators-2000-2020
 
-下载数据：
-
-![](assets/llm-data-governance/Global_Development_Indicators_2000_2020.csv)
-## LLM提示词处理流程
+## llm提示词处理流程
 
 1. Excel表格识别/抽取(指定哪些列、行)
 2. 数值校验、补全等
@@ -417,7 +415,7 @@ CREATE TABLE global_development_indicators (
 
 ##### 插入结果
 
-![](assets/llm-data-governance/{B29771A8-36D9-4388-BF9A-D015BD1CD355}.png)
+![](./assets/llm-data-governance/{B29771A8-36D9-4388-BF9A-D015BD1CD355}.png)
 #### 数据插入SQL
 
 ```sql
@@ -554,7 +552,7 @@ region_economic.to_csv('cleaned_region_economic_data.csv', index=False)
 
 ##### 创建结果
 
-![](assets/llm-data-governance/{914082FE-862E-4F86-8CC7-D1F7ECCB8409}.png)
+![](./assets/llm-data-governance/{914082FE-862E-4F86-8CC7-D1F7ECCB8409}.png)
 
 #### 数据库表设计语句
 
@@ -637,7 +635,7 @@ ORDER BY total_gdp DESC;
 
 各个区域GDP总量对比
 
-![](assets/llm-data-governance/{31238970-0267-45AB-93A8-C9FC699D0533}.png)
+![](./assets/llm-data-governance/{31238970-0267-45AB-93A8-C9FC699D0533}.png)
 
 ## 使用总结
 
@@ -662,7 +660,7 @@ ORDER BY total_gdp DESC;
 9. 根据验证结果持久化代码为应用/服务
 
 
-![](assets/llm-data-governance/file-20250520233443984.png)
+![](./assets/llm-data-governance/20250520233443984.png)
 
 ## 实践流程展示
 
@@ -686,7 +684,7 @@ ORDER BY total_gdp DESC;
 5. 在代码中提供基本的注释
 6. 提供基本的java和数据库环境
 
-#### LLM输出主要内容
+#### llm输出主要内容
 
 1. maven编译打包命令
 2. jar包执行命令
@@ -913,7 +911,7 @@ java -jar target/csv-database-importer-1.0-SNAPSHOT.jar
 4. 文件路径
 5. 输出要求
 
-#### LLM提供的程序
+#### llm提供的程序
 
 ```java
   
@@ -1410,7 +1408,7 @@ java -cp ".;C:\APP\CODE\temp\govern\mysql-connector-j-9.3.0.jar" CSVToDatabaseIm
 
 ```
 
-#### LLM提供的程序
+#### llm提供的程序
 
 ```java
   
@@ -1905,7 +1903,7 @@ public class CSVToDatabaseImporter {
 ```
 
 
-#### LLM程序运行输出结果
+#### llm程序运行输出结果
 
 1. 成功连接到数据库
 2. 表 global_development_indicators 创建成功
@@ -1916,7 +1914,7 @@ public class CSVToDatabaseImporter {
 7. 已插入 5000 条记录
 8. 数据导入完成，共插入 5556 条记录
 
-![](assets/LLM-data-governance/{D1B60B60-CFE8-4927-A609-0048B4D55BD0}.png)
+![](./assets/llm-data-governance/{D1B60B60-CFE8-4927-A609-0048B4D55BD0}.png)
 
 ### 自己手动调整过程
 
