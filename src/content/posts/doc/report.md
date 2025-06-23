@@ -1131,3 +1131,10 @@ image: /violet.png
 # 参数配比问题
 
 dlookahead会影响块密集度，应为会影响临近点的搜索
+
+碰撞检测是属于两个主次方向的碰撞检测，流线生成器会存储两种流线，基于随机性进行碰撞检测。
+grid_valid = self.grid(major).is_valid_sample(point, d_sq)
+
+        if both_grids:
+
+            grid_valid = grid_valid and self.grid(not major).is_valid_sample(point, d_sq)
