@@ -1127,3 +1127,7 @@ image: /violet.png
 1.   **全局作用**：定义项目参数验证体系，采用Pydantic模型。
 2.   **核心类**：`ALLParams` (主配置类，实现单例模式，从JSON加载)，以及各模块的具体参数类如 `MapWaterParams`, `MainMajorMinorParams`, `MapBuildingsParams`, `TensorFieldParams` 等，均继承自Pydantic的`BaseModel`，实现类型检查、默认值和序列化。
 
+
+# 参数配比问题
+
+dlookahead会影响块密集度，应为会影响临近点的搜索
